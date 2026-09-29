@@ -1,0 +1,246 @@
+{
+  "id": "b19-1",
+  "name": "Метрика с синей плашкой",
+  "description": "Крупное число с подписью-плашкой сверху",
+  "tags": [
+    "метрика",
+    "плашка",
+    "акцент"
+  ],
+  "kind": "metric",
+  "sourceIds": [
+    "s19-object-108",
+    "s19-object-109",
+    "s19-object-110",
+    "s19-object-105",
+    "s19-object-107"
+  ],
+  "memberIds": [],
+  "style": {
+    "font": "Play",
+    "color": "#FFFFFF",
+    "headingFont": "Play",
+    "accent": "#0077FF",
+    "background": "#000000",
+    "align": "left",
+    "metricSize": 72,
+    "padding": 0,
+    "radius": 0
+  },
+  "config": {},
+  "data": {
+    "value": "ХХ",
+    "unit": "",
+    "items": [
+      {
+        "text": "Заголовок"
+      }
+    ]
+  },
+  "dataStatus": "readable",
+  "adaptation": {
+    "version": "component-intent-1",
+    "family": "number-caption",
+    "fields": [
+      {
+        "sourceId": "s19-object-107",
+        "part": "whole",
+        "role": "number"
+      },
+      {
+        "sourceId": "s19-object-110",
+        "part": "whole",
+        "role": "caption"
+      }
+    ],
+    "layouts": [
+      {
+        "state": "vertical",
+        "textAlign": "source",
+        "position": "top"
+      },
+      {
+        "state": "horizontal",
+        "textAlign": "left",
+        "position": "center"
+      }
+    ],
+    "rationale": "Число и подпись-плашка образуют метрику; плашка может стоять сверху или сбоку."
+  },
+  "slide": 19,
+  "width": 300.3377427821522,
+  "height": 133.64692913385824,
+  "graphicHtml": {},
+  "sourceLayout": {
+    "graphic": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300.3377427821522 133.64692913385824\" width=\"100%\" height=\"100%\" overflow=\"visible\"><g transform=\"translate(0 0)\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 194.14719160104985 53.281679790026246\" width=\"194.14719160104983\" height=\"53.28167979002626\" overflow=\"visible\" aria-hidden=\"true\"><g data-source-object=\"s19-object-108\" transform=\"translate(97.07359580052493 26.640839895013123) rotate(0) scale(1 1) translate(-97.07359580052493 -26.640839895013123)\" opacity=\"1\"><g data-source-object=\"s19-object-109\" transform=\"translate(0 0) rotate(0)\" opacity=\"1\"><path d=\"M 26.640839895013123 0 L 167.50635170603672 0 C 182.21968130273626 0 194.14719160104985 11.927510298313576 194.14719160104985 26.640839895013123 L 194.14719160104985 26.640839895013123 C 194.14719160104985 41.35416949171267 182.21968130273626 53.281679790026246 167.50635170603672 53.281679790026246 L 26.640839895013123 53.281679790026246 C 11.927510298313576 53.281679790026246 0 41.35416949171267 0 26.640839895013123 L 0 26.640839895013123 C 0 11.927510298313576 11.927510298313576 0 26.640839895013123 0 Z\" fill=\"#6dbcff\" fill-rule=\"nonzero\" /></g></g></svg></g><g transform=\"translate(1.0435695538057672 82.91926509186345)\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 299.29417322834644 50.72766404199475\" width=\"299.29417322834644\" height=\"50.727664041994785\" overflow=\"visible\" aria-hidden=\"true\"><g data-source-object=\"s19-object-105\" transform=\"translate(149.64708661417322 25.363832020997375) rotate(0) scale(1 1) translate(-149.64708661417322 -25.363832020997375)\" opacity=\"1\"></g></svg></g></svg>",
+    "text": [
+      {
+        "element": {
+          "id": "s19-object-107",
+          "name": "Google Shape;732;p35",
+          "bounds": {
+            "x": 1.0435695538057672,
+            "y": 82.91926509186345,
+            "width": 299.29417322834644,
+            "height": 50.727664041994785
+          },
+          "rotation": 0,
+          "opacity": 1,
+          "visible": true,
+          "zIndex": 107,
+          "kind": "text",
+          "text": "ХХ",
+          "flow": {
+            "columns": 1,
+            "gap": 0,
+            "autoFit": "NONE"
+          },
+          "paragraphs": [
+            {
+              "defaultTab": 96,
+              "start": 0,
+              "end": 2,
+              "align": "LEFT",
+              "left": 0,
+              "right": 0,
+              "indent": 0,
+              "before": 0,
+              "after": 0,
+              "fontSize": 72,
+              "lineHeight": {
+                "unit": "PERCENT",
+                "value": 90
+              }
+            }
+          ],
+          "styleRuns": [
+            {
+              "decoration": "NONE",
+              "letterSpacing": 0,
+              "start": 0,
+              "end": 2,
+              "fontFamily": "Play",
+              "fontStyle": "Bold",
+              "fontSize": 72
+            }
+          ],
+          "textBox": {
+            "align": "LEFT",
+            "vertical": "TOP",
+            "wrap": true
+          },
+          "colorRuns": [
+            {
+              "start": 0,
+              "end": 2,
+              "fill": {
+                "type": "solid",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1,
+                  "a": 1
+                }
+              }
+            }
+          ],
+          "fontFamily": "Play",
+          "fontStyle": "Bold",
+          "fontSize": 72
+        },
+        "binding": {
+          "field": "metric"
+        }
+      },
+      {
+        "element": {
+          "id": "s19-object-110",
+          "name": "Google Shape;733;p35",
+          "bounds": {
+            "x": 0,
+            "y": 4.797900262467181,
+            "width": 194.14719160104983,
+            "height": 43.68587926509184
+          },
+          "rotation": 0,
+          "opacity": 1,
+          "visible": true,
+          "zIndex": 110,
+          "kind": "text",
+          "text": "Заголовок",
+          "flow": {
+            "columns": 1,
+            "gap": 0,
+            "autoFit": "NONE"
+          },
+          "paragraphs": [
+            {
+              "defaultTab": 96,
+              "start": 0,
+              "end": 9,
+              "align": "CENTER",
+              "left": 0,
+              "right": 0,
+              "indent": 0,
+              "before": 0,
+              "after": 0,
+              "fontSize": 21.333333333333332,
+              "lineHeight": {
+                "unit": "PERCENT",
+                "value": 100
+              }
+            }
+          ],
+          "styleRuns": [
+            {
+              "decoration": "NONE",
+              "letterSpacing": 0,
+              "start": 0,
+              "end": 9,
+              "fontFamily": "Play",
+              "fontStyle": "Regular",
+              "fontSize": 21.333333333333332
+            }
+          ],
+          "textBox": {
+            "align": "CENTER",
+            "vertical": "CENTER",
+            "wrap": true
+          },
+          "colorRuns": [
+            {
+              "start": 0,
+              "end": 9,
+              "fill": {
+                "type": "solid",
+                "color": {
+                  "r": 0,
+                  "g": 0,
+                  "b": 0,
+                  "a": 1
+                }
+              }
+            }
+          ],
+          "fontFamily": "Play",
+          "fontStyle": "Regular",
+          "fontSize": 21.333333333333332
+        },
+        "binding": {
+          "field": "item",
+          "index": 0,
+          "part": "text"
+        }
+      }
+    ],
+    "graphicIds": [
+      "s19-object-109"
+    ],
+    "structure": {
+      "panels": 1,
+      "orientation": "mixed",
+      "inline": false,
+      "illustrated": false
+    }
+  }
+}

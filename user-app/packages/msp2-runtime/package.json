@@ -1,0 +1,15 @@
+{
+  "name": "@msp2/runtime",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./index.ts", "./catalog": "./catalog.ts" },
+  "dependencies": {
+    "@json-render/core": "0.21.0",
+    "@json-render/react": "0.21.0",
+    "fitty": "2.4.2",
+    "react-grid-layout": "2.2.4",
+    "zod": "^4.0.0"
+  },
+  "peerDependencies": { "react": "^19.2.3", "react-dom": "^19.2.3" }
+}

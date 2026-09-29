@@ -1,0 +1,50 @@
+.ds-progress { padding:16px 32px 14px; border-bottom:1px solid #dce5f3; background:#f5f8ff; color:#344762; font-size:12px; }
+.ds-progress-heading,.ds-progress-actions,.ds-progress-title,.ds-progress-current,.ds-progress-time,.ds-progress-footnote { display:flex; align-items:center; gap:12px; }
+.ds-progress-heading { justify-content:space-between; margin-bottom:14px; }
+.ds-progress-title { min-width:0; }
+.ds-progress-title strong { font-size:13px; color:#243752; font-weight:600; flex-shrink:0; }
+.ds-progress-title > span,.ds-progress-title select { min-width:0; max-width:360px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:#62728a; }
+.ds-progress-title select { background:white; border:1px solid #d6dfed; border-radius:7px; padding:4px 8px; }
+.ds-progress-actions { flex-shrink:0; color:#245cc4; }
+.ds-progress-actions button { display:grid; place-items:center; width:32px; height:32px; border-radius:8px; }
+.ds-progress-actions button:hover { background:#e6edfa; }
+.ds-progress-steps { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); margin:0 0 14px; padding:0; list-style:none; gap:12px; }
+.ds-progress-steps li { position:relative; display:flex; align-items:center; gap:8px; color:#728099; font-size:12px; }
+.ds-progress-steps li::after { content:''; height:1px; background:#dce3ef; flex:1; margin-left:4px; }
+.ds-progress-steps li:last-child::after { display:none; }
+.ds-step-compact { display:none; }
+.ds-progress-marker { display:grid; place-items:center; flex-shrink:0; width:23px; height:23px; border-radius:50%; border:1px solid #cbd5e4; font-size:10px; font-variant-numeric:tabular-nums; background:#f5f8ff; }
+.ds-progress-steps [data-state=done] { color:#3e6a61; }
+.ds-progress-steps [data-state=done] .ds-progress-marker { border-color:transparent; background:#e0eee8; color:#287260; }
+.ds-progress-steps [data-state=running],.ds-progress-steps [data-state=waiting] { color:#245cc4; font-weight:600; }
+.ds-progress-steps [data-state=running] .ds-progress-marker,.ds-progress-steps [data-state=waiting] .ds-progress-marker { color:white; background:#326fe7; border-color:#326fe7; }
+.ds-progress-steps [data-state=error] { color:#97512e; font-weight:600; }
+.ds-progress-steps [data-state=error] .ds-progress-marker { border-color:#dbb39a; background:#fff3e9; }
+.ds-progress-current { justify-content:space-between; align-items:baseline; gap:8px 20px; flex-wrap:wrap; }
+.ds-progress-current p { margin:0; line-height:1.55; }
+.ds-progress-count { margin-left:10px; color:#245cc4; white-space:nowrap; font-weight:600; font-variant-numeric:tabular-nums; }
+.ds-progress-time { gap:5px; color:#61718a; font-size:11px; white-space:nowrap; }
+.ds-progress-bar { appearance:none; display:block; width:100%; height:3px; border:0; border-radius:2px; margin:10px 0 0; overflow:hidden; background:#e0e7f2; }
+.ds-progress-bar::-webkit-progress-bar { background:#e0e7f2; }
+.ds-progress-bar::-webkit-progress-value { background:#326fe7; }
+.ds-progress-bar::-moz-progress-bar { background:#326fe7; }
+.ds-progress-footnote { justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:4px 16px; font-size:11px; line-height:1.5; color:#66758b; margin-top:9px; }
+.ds-progress a:focus-visible,.ds-progress button:focus-visible,.ds-progress select:focus-visible { outline:2px solid #326fe7; outline-offset:3px; }
+@media(max-width:900px) {
+ .ds-progress { padding:12px 20px; }
+ .ds-progress-title { align-items:flex-start; flex-direction:column; gap:3px; }
+ .ds-progress-title > span { max-width:45vw; }
+ .ds-progress-steps { gap:8px; }
+ .ds-progress-steps li { flex-direction:column; align-items:flex-start; gap:5px; font-size:10px; line-height:1.3; }
+ .ds-progress-steps li::after { position:absolute; left:31px; top:11px; width:calc(100% - 30px); }
+}
+@media(max-width:480px) {
+ .ds-step-label { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+ .ds-step-compact { display:inline; }
+}
+@media(max-width:380px) { .ds-progress { padding:10px 14px; } .ds-progress-title strong { font-size:12px; } }
+.ds-progress-actions .ds-progress-retry { width:auto; height:auto; padding:7px 10px; background:white; border:1px solid #d6dfed; font-size:11px; text-align:left; }
+.ds-progress-spinner { animation:ds-progress-spin 1.1s linear infinite; }
+@keyframes ds-progress-spin { to { transform:rotate(360deg); } }
+@media(prefers-reduced-motion:reduce) { .ds-progress-spinner { animation:none; } }
+@media(max-width:540px) { .ds-progress-heading { align-items:flex-start; } .ds-progress-actions { gap:4px; max-width:42%; flex-wrap:wrap; } }

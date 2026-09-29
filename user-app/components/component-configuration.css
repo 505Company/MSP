@@ -1,0 +1,10 @@
+.component-settings-entry{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 0;border-block:1px solid #e3e8ef}
+.component-settings-entry strong{font-size:14px;font-weight:600;color:#26364c}
+.component-settings-entry p{font-size:12px;line-height:1.5;color:#67778c;margin:5px 0 0}
+.component-settings-entry a{flex-shrink:0;display:inline-flex;align-items:center;gap:8px;font-size:13px}
+.component-configured-preview{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:250px;padding:20px 0;background:#f5f6fa;border:1px solid #e3e7ee;border-radius:10px;overflow:hidden}
+.component-configured-preview>div{flex-shrink:0}
+.component-configured-preview p{max-width:440px;font-size:13px;line-height:1.6;text-align:center;color:#67778c;padding:0 20px}
+.component-font-note{font-size:12px;color:#67778c;margin:-10px 0 0}
+.component-original summary{font-size:12px;color:#67778c;cursor:pointer;margin-bottom:12px}
+@media(max-width:760px){.component-settings-entry{align-items:start;flex-direction:column}}

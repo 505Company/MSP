@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:msp:qwen-task-input:1.0.0",
+  "title": "MSP Qwen task input — structural PPTX adapter v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "task", "source", "coordinateSpace", "capabilities", "dataPolicy", "roots", "sourceSlides", "counts", "selection", "nodes", "foundations", "previews", "warnings"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "task": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "version", "promptVersion"],
+      "properties": {
+        "kind": { "const": "presentation_style_analysis" },
+        "version": { "const": "1.0.0" },
+        "promptVersion": { "const": "style-structure-v1" }
+      }
+    },
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["origin", "documentId", "sha256", "profileVersion"],
+      "properties": {
+        "origin": { "const": "pptx" },
+        "documentId": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "profileVersion": { "enum": ["0.3.0", "0.3.1"] }
+      }
+    },
+    "coordinateSpace": {
+      "type": "object", "additionalProperties": false,
+      "required": ["unit", "origin", "clipped", "aspectRatio"],
+      "properties": {
+        "unit": { "const": "slide_fraction" }, "origin": { "const": "top_left" },
+        "clipped": { "const": false }, "aspectRatio": { "type": "number", "exclusiveMinimum": 0 }
+      }
+    },
+    "capabilities": {
+      "const": {
+        "modality": "structure_only", "hierarchy": "available", "geometry": "partial",
+        "colors": "explicit_unmodified_only", "typography": "explicit_run_properties_only",
+        "inheritedStyles": "unavailable", "renderedAppearance": "unavailable", "previews": "unavailable",
+        "text": "excluded", "childOrder": "not_z_order"
+      }
+    },
+    "dataPolicy": {
+      "const": { "slideText": "excluded", "objectNames": "excluded", "fileName": "excluded", "notes": "excluded", "images": "excluded" }
+    },
+    "roots": { "type": "array", "minItems": 1, "maxItems": 18, "uniqueItems": true, "items": { "$ref": "#/$defs/id" } },
+    "sourceSlides": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "index", "number", "hidden", "objectCount", "providedObjectCount", "omittedObjectCount", "included"],
+        "properties": {
+          "id": { "$ref": "#/$defs/id" }, "index": { "$ref": "#/$defs/count" },
+          "number": { "type": "integer", "minimum": 1 }, "hidden": { "type": "boolean" },
+          "objectCount": { "$ref": "#/$defs/count" }, "providedObjectCount": { "type": "integer", "minimum": 0, "maximum": 36 },
+          "omittedObjectCount": { "$ref": "#/$defs/count" }, "included": { "type": "boolean" }
+        }
+      }
+    },
+    "counts": {
+      "type": "object", "additionalProperties": false,
+      "required": ["slidesTotal", "slidesProvided", "slidesOmitted", "objectsTotal", "objectsProvided", "objectsOmitted", "colorsTotal", "colorsProvided", "typographyTotal", "typographyProvided", "geometryUnavailableProvided", "previewsProvided"],
+      "properties": {
+        "slidesTotal": { "$ref": "#/$defs/count" }, "slidesProvided": { "type": "integer", "minimum": 0, "maximum": 18 }, "slidesOmitted": { "$ref": "#/$defs/count" },
+        "objectsTotal": { "$ref": "#/$defs/count" }, "objectsProvided": { "type": "integer", "minimum": 0, "maximum": 360 }, "objectsOmitted": { "$ref": "#/$defs/count" },
+        "colorsTotal": { "$ref": "#/$defs/count" }, "colorsProvided": { "type": "integer", "minimum": 0, "maximum": 24 },
+        "typographyTotal": { "$ref": "#/$defs/count" }, "typographyProvided": { "type": "integer", "minimum": 0, "maximum": 32 },
+        "geometryUnavailableProvided": { "$ref": "#/$defs/count" }, "previewsProvided": { "const": 0 }
+      }
+    },
+    "selection": {
+      "type": "object", "additionalProperties": false,
+      "required": ["strategy", "limits", "truncated", "byteBudgetApplied"],
+      "properties": {
+        "strategy": { "const": "first12_dense8_kind_round_robin_v1" },
+        "limits": { "const": { "slides": 18, "objectsPerSlide": 36, "objects": 360, "colors": 24, "typography": 32, "evidencePerStyle": 6, "bytes": 128000 } },
+        "truncated": { "type": "boolean" }, "byteBudgetApplied": { "type": "boolean" }
+      }
+    },
+    "nodes": { "type": "array", "minItems": 1, "maxItems": 378, "items": { "$ref": "#/$defs/node" } },
+    "foundations": {
+      "type": "object", "additionalProperties": false,
+      "required": ["colors", "typography"],
+      "properties": {
+        "colors": {
+          "type": "array", "maxItems": 24,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["id", "hex", "usageCount", "evidenceNodeIds"],
+            "properties": {
+              "id": { "type": "string", "pattern": "^color:[0-9A-F]{6}$" },
+              "hex": { "type": "string", "pattern": "^#[0-9A-F]{6}$" },
+              "usageCount": { "type": "integer", "minimum": 1 }, "evidenceNodeIds": { "$ref": "#/$defs/evidence" }
+            }
+          }
+        },
+        "typography": {
+          "type": "array", "maxItems": 32,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["id", "fontFamily", "fontSizePt", "fontWeight", "italic", "usageCount", "evidenceNodeIds"],
+            "properties": {
+              "id": { "type": "string", "pattern": "^typography:[1-9][0-9]*$" },
+              "fontFamily": { "type": ["string", "null"] }, "fontSizePt": { "type": "number", "exclusiveMinimum": 0 },
+              "fontWeight": { "enum": [400, 700, null] }, "italic": { "type": ["boolean", "null"] },
+              "usageCount": { "type": "integer", "minimum": 1 }, "evidenceNodeIds": { "$ref": "#/$defs/evidence" }
+            }
+          }
+        }
+      }
+    },
+    "previews": { "type": "array", "maxItems": 0 },
+    "warnings": {
+      "type": "array", "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["code", "message", "count"],
+        "properties": { "code": { "type": "string" }, "message": { "type": "string" }, "count": { "$ref": "#/$defs/count" } }
+      }
+    }
+  },
+  "$defs": {
+    "id": { "type": "string", "minLength": 1 },
+    "count": { "type": "integer", "minimum": 0 },
+    "ids": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/id" } },
+    "evidence": { "type": "array", "maxItems": 6, "uniqueItems": true, "items": { "$ref": "#/$defs/id" } },
+    "bounds": {
+      "type": "object", "additionalProperties": false, "required": ["x", "y", "width", "height"],
+      "properties": {
+        "x": { "type": "number" }, "y": { "type": "number" },
+        "width": { "type": "number", "minimum": 0 }, "height": { "type": "number", "minimum": 0 }
+      }
+    },
+    "node": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "rootId", "parentId", "type", "sourceRef", "identityMethod", "bounds", "geometry", "roleHint", "props", "children", "fullChildCount"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" }, "rootId": { "$ref": "#/$defs/id" }, "parentId": { "type": ["string", "null"] },
+        "type": { "enum": ["slide", "text", "image", "shape", "line", "group", "chart", "table", "smartArt", "unknown"] },
+        "sourceRef": {
+          "type": "object", "additionalProperties": false, "required": ["part", "shapeId", "elementPath"],
+          "properties": {
+            "part": { "type": "string", "pattern": "^ppt/slides/[^/]+\\.xml$" },
+            "shapeId": { "type": ["string", "null"], "pattern": "^[0-9]{1,10}$" }, "elementPath": { "type": ["string", "null"] }
+          }
+        },
+        "identityMethod": { "enum": ["slide_part", "shape_id", "element_path"] },
+        "bounds": { "anyOf": [{ "$ref": "#/$defs/bounds" }, { "type": "null" }] },
+        "geometry": {
+          "oneOf": [
+            { "const": { "status": "available", "reason": null } },
+            {
+              "type": "object", "additionalProperties": false, "required": ["status", "reason"],
+              "properties": {
+                "status": { "const": "unavailable" },
+                "reason": { "enum": ["missing_transform", "invalid_transform", "group_transform_not_resolved", "rotation_or_flip_not_resolved"] }
+              }
+            }
+          ]
+        },
+        "roleHint": {
+          "anyOf": [
+            { "type": "null" },
+            {
+              "type": "object", "additionalProperties": false, "required": ["value", "basis"],
+              "properties": {
+                "value": { "enum": ["title", "subtitle", "body", "image", "divider", "background", "decoration", "unknown"] },
+                "basis": { "enum": ["placeholder", "heuristic"] }
+              }
+            }
+          ]
+        },
+        "props": {
+          "type": "object", "additionalProperties": false, "required": ["colorIds", "typographyIds"],
+          "properties": { "colorIds": { "$ref": "#/$defs/ids" }, "typographyIds": { "$ref": "#/$defs/ids" } }
+        },
+        "children": { "$ref": "#/$defs/ids" }, "fullChildCount": { "$ref": "#/$defs/count" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "geometry": { "properties": { "status": { "const": "unavailable" } }, "type": "object", "required": ["status"] } }, "required": ["geometry"] },
+          "then": { "properties": { "bounds": { "type": "null" } } },
+          "else": { "properties": { "bounds": { "$ref": "#/$defs/bounds" } } }
+        }
+      ]
+    }
+  }
+}

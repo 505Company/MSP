@@ -1,0 +1,336 @@
+{
+  "schemaVersion": "1.0.0",
+  "task": {
+    "kind": "presentation_style_analysis",
+    "version": "1.0.0",
+    "promptVersion": "style-structure-v1"
+  },
+  "source": {
+    "origin": "pptx",
+    "documentId": "sha256:efa720aa9fcda2f61bbb08bc01c3a0045b15e4c57528e65bfb3ea134a149cafa",
+    "sha256": "efa720aa9fcda2f61bbb08bc01c3a0045b15e4c57528e65bfb3ea134a149cafa",
+    "profileVersion": "0.3.0"
+  },
+  "coordinateSpace": {
+    "unit": "slide_fraction",
+    "origin": "top_left",
+    "clipped": false,
+    "aspectRatio": 2
+  },
+  "capabilities": {
+    "modality": "structure_only",
+    "hierarchy": "available",
+    "geometry": "partial",
+    "colors": "explicit_unmodified_only",
+    "typography": "explicit_run_properties_only",
+    "inheritedStyles": "unavailable",
+    "renderedAppearance": "unavailable",
+    "previews": "unavailable",
+    "text": "excluded",
+    "childOrder": "not_z_order"
+  },
+  "dataPolicy": {
+    "slideText": "excluded",
+    "objectNames": "excluded",
+    "fileName": "excluded",
+    "notes": "excluded",
+    "images": "excluded"
+  },
+  "roots": [
+    "pptx:ppt/slides/slide1.xml",
+    "pptx:ppt/slides/slide2.xml"
+  ],
+  "sourceSlides": [
+    {
+      "id": "pptx:ppt/slides/slide1.xml",
+      "index": 0,
+      "number": 1,
+      "hidden": false,
+      "objectCount": 3,
+      "providedObjectCount": 3,
+      "omittedObjectCount": 0,
+      "included": true
+    },
+    {
+      "id": "pptx:ppt/slides/slide2.xml",
+      "index": 1,
+      "number": 2,
+      "hidden": false,
+      "objectCount": 1,
+      "providedObjectCount": 1,
+      "omittedObjectCount": 0,
+      "included": true
+    }
+  ],
+  "counts": {
+    "slidesTotal": 2,
+    "slidesProvided": 2,
+    "slidesOmitted": 0,
+    "objectsTotal": 4,
+    "objectsProvided": 4,
+    "objectsOmitted": 0,
+    "colorsTotal": 2,
+    "colorsProvided": 2,
+    "typographyTotal": 1,
+    "typographyProvided": 1,
+    "geometryUnavailableProvided": 1,
+    "previewsProvided": 0
+  },
+  "selection": {
+    "strategy": "first12_dense8_kind_round_robin_v1",
+    "limits": {
+      "slides": 18,
+      "objectsPerSlide": 36,
+      "objects": 360,
+      "colors": 24,
+      "typography": 32,
+      "evidencePerStyle": 6,
+      "bytes": 128000
+    },
+    "byteBudgetApplied": false,
+    "truncated": false
+  },
+  "nodes": [
+    {
+      "id": "pptx:ppt/slides/slide1.xml",
+      "rootId": "pptx:ppt/slides/slide1.xml",
+      "parentId": null,
+      "type": "slide",
+      "sourceRef": {
+        "part": "ppt/slides/slide1.xml",
+        "shapeId": null,
+        "elementPath": null
+      },
+      "identityMethod": "slide_part",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1
+      },
+      "geometry": {
+        "status": "available",
+        "reason": null
+      },
+      "roleHint": null,
+      "props": {
+        "colorIds": [],
+        "typographyIds": []
+      },
+      "children": [
+        "pptx:ppt/slides/slide1.xml/shape/2",
+        "pptx:ppt/slides/slide1.xml/shape/3"
+      ],
+      "fullChildCount": 2
+    },
+    {
+      "id": "pptx:ppt/slides/slide2.xml",
+      "rootId": "pptx:ppt/slides/slide2.xml",
+      "parentId": null,
+      "type": "slide",
+      "sourceRef": {
+        "part": "ppt/slides/slide2.xml",
+        "shapeId": null,
+        "elementPath": null
+      },
+      "identityMethod": "slide_part",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1
+      },
+      "geometry": {
+        "status": "available",
+        "reason": null
+      },
+      "roleHint": null,
+      "props": {
+        "colorIds": [],
+        "typographyIds": []
+      },
+      "children": [
+        "pptx:ppt/slides/slide2.xml/shape/2"
+      ],
+      "fullChildCount": 1
+    },
+    {
+      "id": "pptx:ppt/slides/slide1.xml/shape/2",
+      "rootId": "pptx:ppt/slides/slide1.xml",
+      "parentId": "pptx:ppt/slides/slide1.xml",
+      "type": "text",
+      "sourceRef": {
+        "part": "ppt/slides/slide1.xml",
+        "shapeId": "2",
+        "elementPath": "p:spTree/p:sp[0]"
+      },
+      "identityMethod": "shape_id",
+      "bounds": {
+        "x": 0.1,
+        "y": 0.1,
+        "width": 0.3,
+        "height": 0.2
+      },
+      "geometry": {
+        "status": "available",
+        "reason": null
+      },
+      "roleHint": {
+        "value": "title",
+        "basis": "heuristic"
+      },
+      "props": {
+        "colorIds": [
+          "color:123456"
+        ],
+        "typographyIds": [
+          "typography:1"
+        ]
+      },
+      "children": [],
+      "fullChildCount": 0
+    },
+    {
+      "id": "pptx:ppt/slides/slide2.xml/shape/2",
+      "rootId": "pptx:ppt/slides/slide2.xml",
+      "parentId": "pptx:ppt/slides/slide2.xml",
+      "type": "text",
+      "sourceRef": {
+        "part": "ppt/slides/slide2.xml",
+        "shapeId": "2",
+        "elementPath": "p:spTree/p:sp[0]"
+      },
+      "identityMethod": "shape_id",
+      "bounds": {
+        "x": 0.1,
+        "y": 0.1,
+        "width": 0.3,
+        "height": 0.2
+      },
+      "geometry": {
+        "status": "available",
+        "reason": null
+      },
+      "roleHint": {
+        "value": "title",
+        "basis": "heuristic"
+      },
+      "props": {
+        "colorIds": [
+          "color:3377FF"
+        ],
+        "typographyIds": [
+          "typography:1"
+        ]
+      },
+      "children": [],
+      "fullChildCount": 0
+    },
+    {
+      "id": "pptx:ppt/slides/slide1.xml/shape/3",
+      "rootId": "pptx:ppt/slides/slide1.xml",
+      "parentId": "pptx:ppt/slides/slide1.xml",
+      "type": "group",
+      "sourceRef": {
+        "part": "ppt/slides/slide1.xml",
+        "shapeId": "3",
+        "elementPath": "p:spTree/p:grpSp[0]"
+      },
+      "identityMethod": "shape_id",
+      "bounds": {
+        "x": 0.1,
+        "y": 0.2,
+        "width": 0.6,
+        "height": 0.6
+      },
+      "geometry": {
+        "status": "available",
+        "reason": null
+      },
+      "roleHint": {
+        "value": "unknown",
+        "basis": "heuristic"
+      },
+      "props": {
+        "colorIds": [],
+        "typographyIds": []
+      },
+      "children": [
+        "pptx:ppt/slides/slide1.xml/shape/4"
+      ],
+      "fullChildCount": 1
+    },
+    {
+      "id": "pptx:ppt/slides/slide1.xml/shape/4",
+      "rootId": "pptx:ppt/slides/slide1.xml",
+      "parentId": "pptx:ppt/slides/slide1.xml/shape/3",
+      "type": "image",
+      "sourceRef": {
+        "part": "ppt/slides/slide1.xml",
+        "shapeId": "4",
+        "elementPath": "p:spTree/p:grpSp[0]/p:pic[0]"
+      },
+      "identityMethod": "shape_id",
+      "bounds": null,
+      "geometry": {
+        "status": "unavailable",
+        "reason": "group_transform_not_resolved"
+      },
+      "roleHint": {
+        "value": "image",
+        "basis": "heuristic"
+      },
+      "props": {
+        "colorIds": [
+          "color:123456"
+        ],
+        "typographyIds": []
+      },
+      "children": [],
+      "fullChildCount": 0
+    }
+  ],
+  "foundations": {
+    "colors": [
+      {
+        "id": "color:123456",
+        "hex": "#123456",
+        "usageCount": 2,
+        "evidenceNodeIds": [
+          "pptx:ppt/slides/slide1.xml/shape/2",
+          "pptx:ppt/slides/slide1.xml/shape/4"
+        ]
+      },
+      {
+        "id": "color:3377FF",
+        "hex": "#3377FF",
+        "usageCount": 1,
+        "evidenceNodeIds": [
+          "pptx:ppt/slides/slide2.xml/shape/2"
+        ]
+      }
+    ],
+    "typography": [
+      {
+        "id": "typography:1",
+        "fontFamily": "Arial",
+        "fontSizePt": 24,
+        "fontWeight": 700,
+        "italic": null,
+        "usageCount": 2,
+        "evidenceNodeIds": [
+          "pptx:ppt/slides/slide1.xml/shape/2",
+          "pptx:ppt/slides/slide2.xml/shape/2"
+        ]
+      }
+    ]
+  },
+  "previews": [],
+  "warnings": [
+    {
+      "code": "group_transform_not_resolved",
+      "message": "Координаты внутри групп не пересчитаны в координаты слайда.",
+      "count": 1
+    }
+  ]
+}

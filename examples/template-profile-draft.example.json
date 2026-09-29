@@ -1,0 +1,208 @@
+{
+  "schemaVersion": "0.1.0",
+  "draftId": "draft-demo-001",
+  "source": {
+    "fileName": "demo-template.pptx",
+    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "slideCount": 2,
+    "slideSizeEmu": {
+      "width": 12192000,
+      "height": 6858000
+    }
+  },
+  "generatedAt": "2026-09-17T09:00:00Z",
+  "profilerVersion": "0.1.0",
+  "tokens": {
+    "colors": [
+      {
+        "id": "color.brand.blue",
+        "name": "Brand blue",
+        "hex": "#005BFF",
+        "roles": ["accent"],
+        "usageCount": 2,
+        "sources": [
+          {
+            "slideIndex": 0,
+            "objectIds": ["shape-4"]
+          }
+        ]
+      }
+    ],
+    "typography": [
+      {
+        "id": "type.title.40",
+        "name": "Slide title",
+        "fontFamily": "Arial",
+        "fontSizePt": 40,
+        "fontWeight": 700,
+        "italic": false,
+        "roles": ["title"],
+        "usageCount": 2,
+        "sources": [
+          {
+            "slideIndex": 0,
+            "objectIds": ["text-1"]
+          }
+        ]
+      }
+    ],
+    "spacing": [],
+    "strokes": []
+  },
+  "primitives": [
+    {
+      "id": "primitive.slide-0.title",
+      "kind": "text",
+      "semanticRole": "title",
+      "box": {
+        "x": 0.08,
+        "y": 0.08,
+        "width": 0.62,
+        "height": 0.12
+      },
+      "styleTokenIds": ["type.title.40"],
+      "source": {
+        "slideIndex": 0,
+        "objectIds": ["text-1"],
+        "box": {
+          "x": 0.08,
+          "y": 0.08,
+          "width": 0.62,
+          "height": 0.12
+        }
+      },
+      "confidence": 0.98
+    },
+    {
+      "id": "primitive.slide-0.badge",
+      "kind": "shape",
+      "semanticRole": "label",
+      "box": {
+        "x": 0.08,
+        "y": 0.28,
+        "width": 0.2,
+        "height": 0.08
+      },
+      "styleTokenIds": ["color.brand.blue"],
+      "source": {
+        "slideIndex": 0,
+        "objectIds": ["shape-4"],
+        "box": {
+          "x": 0.08,
+          "y": 0.28,
+          "width": 0.2,
+          "height": 0.08
+        }
+      },
+      "confidence": 0.91
+    }
+  ],
+  "persistentElements": [],
+  "patterns": [
+    {
+      "id": "pattern.badge-with-label",
+      "label": "Badge with label",
+      "status": "candidate",
+      "parts": [
+        {
+          "role": "badge-background",
+          "allowedKinds": ["shape"],
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+          },
+          "required": true
+        },
+        {
+          "role": "label",
+          "allowedKinds": ["text"],
+          "box": {
+            "x": 0.1,
+            "y": 0.15,
+            "width": 0.8,
+            "height": 0.7
+          },
+          "required": true
+        }
+      ],
+      "occurrences": [
+        {
+          "source": {
+            "slideIndex": 0,
+            "objectIds": ["shape-4", "text-5"]
+          },
+          "box": {
+            "x": 0.08,
+            "y": 0.28,
+            "width": 0.2,
+            "height": 0.08
+          },
+          "primitiveIds": ["primitive.slide-0.badge"]
+        }
+      ],
+      "confidence": 0.72
+    }
+  ],
+  "constructions": [],
+  "layouts": [
+    {
+      "id": "layout.title-and-content",
+      "label": "Title and content",
+      "status": "candidate",
+      "zones": [
+        {
+          "id": "title",
+          "role": "title",
+          "box": {
+            "x": 0.08,
+            "y": 0.08,
+            "width": 0.84,
+            "height": 0.12
+          },
+          "required": true
+        },
+        {
+          "id": "content",
+          "role": "content",
+          "box": {
+            "x": 0.08,
+            "y": 0.25,
+            "width": 0.84,
+            "height": 0.65
+          },
+          "required": true
+        }
+      ],
+      "occurrences": [
+        {
+          "source": {
+            "slideIndex": 0,
+            "objectIds": ["text-1", "shape-4"]
+          },
+          "box": {
+            "x": 0.08,
+            "y": 0.08,
+            "width": 0.84,
+            "height": 0.82
+          },
+          "primitiveIds": ["primitive.slide-0.title", "primitive.slide-0.badge"]
+        }
+      ],
+      "confidence": 0.87
+    }
+  ],
+  "warnings": [
+    {
+      "code": "unsupported_object",
+      "message": "SmartArt is preserved as an opaque preview object.",
+      "sources": [
+        {
+          "slideIndex": 1,
+          "objectIds": ["smartart-2"]
+        }
+      ]
+    }
+  ]
+}

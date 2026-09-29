@@ -1,0 +1,6 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": { "incremental": false, "target": "ES2022" },
+  "include": ["../cloudflare-env.d.ts", "../lib/component-lab/**/*.ts", "../browser/component-lab/**/*.ts", "./*.ts", "../tests/component-lab*.test.ts", "../scripts/check-component-rules-live.ts", "../app/api/uploads/[id]/component-profiles/route.ts"],
+  "exclude": []
+}

@@ -1,0 +1,1369 @@
+{
+  "schemaVersion": 1,
+  "id": "design-research-2026-09",
+  "version": 1,
+  "createdAt": "2026-09-19",
+  "status": "research_seed",
+  "sourceSample": {
+    "designSystems": 6,
+    "brandGuides": 5,
+    "additionalUserMaterials": [
+      "yandex-guide",
+      "photostyle-article"
+    ]
+  },
+  "notes": [
+    "Классификация — предложение для продукта.",
+    "Проверенное правило источника не становится обязательным для другого проекта.",
+    "Записи не содержат скачанных брендовых активов; применение в проекте требует явной привязки к его основе."
+  ],
+  "references": [
+    {
+      "id": "material3",
+      "title": "Material Design 3",
+      "kind": "design_system",
+      "url": "https://developer.android.com/develop/ui/compose/designsystems/material3",
+      "checkedAt": "2026-09-19",
+      "limitations": "Официальная документация Android по M3; основной сайт частично требует JavaScript."
+    },
+    {
+      "id": "google-shapes",
+      "title": "Google: Shapes in Compose",
+      "kind": "supporting_document",
+      "url": "https://developer.android.com/develop/ui/compose/graphics/draw/shapes",
+      "checkedAt": "2026-09-19",
+      "limitations": "Дополнительная документация формы и маски; не отдельная дизайн-система в выборке."
+    },
+    {
+      "id": "carbon-grid",
+      "title": "IBM Carbon: 2x Grid",
+      "kind": "design_system",
+      "url": "https://carbondesignsystem.com/elements/2x-grid/overview/",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "carbon-type",
+      "title": "IBM Carbon: Type sets",
+      "kind": "supporting_document",
+      "url": "https://carbondesignsystem.com/elements/typography/type-sets/",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "carbon-pictograms",
+      "title": "IBM Carbon: Pictograms",
+      "kind": "supporting_document",
+      "url": "https://carbondesignsystem.com/elements/pictograms/usage/",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "carbon-data",
+      "title": "IBM Carbon: Data colors",
+      "kind": "supporting_document",
+      "url": "https://carbondesignsystem.com/data-visualization/color-palettes/",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "atlassian-tokens",
+      "title": "Atlassian Design System: Tokens",
+      "kind": "design_system",
+      "url": "https://atlassian.design/foundations/design-tokens",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "atlassian-illustrations",
+      "title": "Atlassian: Illustrations",
+      "kind": "supporting_document",
+      "url": "https://atlassian.design/foundations/illustrations/",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "atlassian-content",
+      "title": "Atlassian: Voice and tone",
+      "kind": "supporting_document",
+      "url": "https://atlassian.design/foundations/content/voice-tone",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "fluent-material",
+      "title": "Microsoft Fluent 2: Material",
+      "kind": "design_system",
+      "url": "https://fluent2.microsoft.design/material",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "fluent-icons",
+      "title": "Fluent 2: Iconography",
+      "kind": "supporting_document",
+      "url": "https://fluent2.microsoft.design/iconography",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "fluent-motion",
+      "title": "Fluent 2: Motion",
+      "kind": "supporting_document",
+      "url": "https://fluent2.microsoft.design/motion",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "spectrum-scale",
+      "title": "Adobe Spectrum: Platform scale",
+      "kind": "design_system",
+      "url": "https://spectrum.adobe.com/page/platform-scale/",
+      "checkedAt": "2026-09-19",
+      "limitations": "Использован доступный индексированный текст официальной документации; не проверка последней Spectrum 2."
+    },
+    {
+      "id": "spectrum-international",
+      "title": "Spectrum: International design",
+      "kind": "supporting_document",
+      "url": "https://spectrum.adobe.com/page/international-design/",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "uswds",
+      "title": "USWDS: Design tokens",
+      "kind": "design_system",
+      "url": "https://designsystem.digital.gov/design-tokens/",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "uswds-type",
+      "title": "USWDS: Typography",
+      "kind": "supporting_document",
+      "url": "https://designsystem.digital.gov/components/typography/",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "uswds-process",
+      "title": "USWDS: Process list",
+      "kind": "supporting_document",
+      "url": "https://designsystem.digital.gov/components/process-list/",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "uswds-summary",
+      "title": "USWDS: Summary box",
+      "kind": "supporting_document",
+      "url": "https://designsystem.digital.gov/components/summary-box/",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "dropbox-imagery",
+      "title": "Dropbox: Imagery",
+      "kind": "brand_guide",
+      "url": "https://brand.dropbox.com/imagery",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "dropbox-logo",
+      "title": "Dropbox: Logo",
+      "kind": "supporting_document",
+      "url": "https://brand.dropbox.com/logo",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "dropbox-type",
+      "title": "Dropbox: Typography",
+      "kind": "supporting_document",
+      "url": "https://brand.dropbox.com/typography",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "redhat-hybrid",
+      "title": "Red Hat: Hybrid style handbook",
+      "kind": "brand_guide",
+      "url": "https://www.redhat.com/en/about/brand/standards/hybrid-style-handbook",
+      "checkedAt": "2026-09-19",
+      "limitations": "Правила отдельных семейств имеют разные области действия."
+    },
+    {
+      "id": "redhat-illustration",
+      "title": "Red Hat: 2D illustration",
+      "kind": "supporting_document",
+      "url": "https://www.redhat.com/en/about/brand/standards/illustration",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "redhat-3d",
+      "title": "Red Hat: 3D",
+      "kind": "supporting_document",
+      "url": "https://www.redhat.com/en/about/brand/standards/3d",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "mailchimp",
+      "title": "Mailchimp: Brand Assets",
+      "kind": "brand_guide",
+      "url": "https://mailchimp.com/about/brand-assets/",
+      "checkedAt": "2026-09-19",
+      "limitations": "Дополнено официальным Content Style Guide; полного актуального руководства по графике не получено."
+    },
+    {
+      "id": "mailchimp-voice",
+      "title": "Mailchimp: Voice and Tone",
+      "kind": "supporting_document",
+      "url": "https://styleguide.mailchimp.com/voice-and-tone/",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "mailchimp-accessibility",
+      "title": "Mailchimp: Accessibility",
+      "kind": "supporting_document",
+      "url": "https://styleguide.mailchimp.com/writing-for-accessibility/",
+      "checkedAt": "2026-09-19",
+      "limitations": ""
+    },
+    {
+      "id": "slack-2020",
+      "title": "Slack Brand Guidelines, September 2020",
+      "kind": "brand_guide",
+      "url": "https://a.slack-edge.com/4d5bb/marketing/img/media-kit/slack_brand_guidelines_september2020.pdf",
+      "checkedAt": "2026-09-19",
+      "limitations": "Историческая редакция; не заявление о действующих требованиях."
+    },
+    {
+      "id": "nasa-1976",
+      "title": "NASA Graphics Standards Manual, January 1976",
+      "kind": "brand_guide",
+      "url": "https://www.nasa.gov/wp-content/uploads/2015/01/nasa_graphics_manual_nhb_1430-2_jan_1976.pdf",
+      "checkedAt": "2026-09-19",
+      "limitations": "Исторический документ с поздними дополнениями."
+    },
+    {
+      "id": "yandex-guide",
+      "title": "Яндекс Новички (work): гайд бук",
+      "kind": "user_guide",
+      "url": "https://www.figma.com/design/neqcTLDL5JGobZl1Zhzskn/%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81-%D0%9D%D0%BE%D0%B2%D0%B8%D1%87%D0%BA%D0%B8--work-?node-id=190-404",
+      "checkedAt": "2026-09-19",
+      "limitations": "Изучен через встроенный браузер; рабочий файл не объявляется общеобязательным гайдбуком Яндекса."
+    },
+    {
+      "id": "photostyle-article",
+      "title": "Фотостиль в эпоху ИИ-генераций",
+      "kind": "user_article",
+      "url": "https://dsgners.ru/505cx/45248-fotostil-v-epohu-ii-generatsiy",
+      "checkedAt": "2026-09-19",
+      "limitations": "Авторский материал; его предложения не являются универсальными требованиями брендов."
+    },
+    {
+      "id": "yandex-photo-modes",
+      "title": "13_1: варианты фотостиля",
+      "kind": "evidence_location",
+      "parentId": "yandex-guide",
+      "url": "https://www.figma.com/design/neqcTLDL5JGobZl1Zhzskn/%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81-%D0%9D%D0%BE%D0%B2%D0%B8%D1%87%D0%BA%D0%B8--work-?node-id=190-104287",
+      "checkedAt": "2026-09-19",
+      "method": "browser_visual_read",
+      "figmaNodeId": "190:104287",
+      "previewPath": null,
+      "previewStatus": "not_saved"
+    },
+    {
+      "id": "yandex-photo-color",
+      "title": "13_4: цветовые акценты в фото",
+      "kind": "evidence_location",
+      "parentId": "yandex-guide",
+      "url": "https://www.figma.com/design/neqcTLDL5JGobZl1Zhzskn/%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81-%D0%9D%D0%BE%D0%B2%D0%B8%D1%87%D0%BA%D0%B8--work-?node-id=190-104973",
+      "checkedAt": "2026-09-19",
+      "method": "browser_visual_read",
+      "figmaNodeId": "190:104973",
+      "previewPath": null,
+      "previewStatus": "not_saved"
+    },
+    {
+      "id": "yandex-photo-cutout",
+      "title": "13a_2: предмет и обтравка",
+      "kind": "evidence_location",
+      "parentId": "yandex-guide",
+      "url": "https://www.figma.com/design/neqcTLDL5JGobZl1Zhzskn/%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81-%D0%9D%D0%BE%D0%B2%D0%B8%D1%87%D0%BA%D0%B8--work-?node-id=190-106165",
+      "checkedAt": "2026-09-19",
+      "method": "browser_visual_read",
+      "figmaNodeId": "190:106165",
+      "previewPath": null,
+      "previewStatus": "not_saved"
+    },
+    {
+      "id": "yandex-photo-material",
+      "title": "13a_4: материалы предметной сцены",
+      "kind": "evidence_location",
+      "parentId": "yandex-guide",
+      "url": "https://www.figma.com/design/neqcTLDL5JGobZl1Zhzskn/%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81-%D0%9D%D0%BE%D0%B2%D0%B8%D1%87%D0%BA%D0%B8--work-?node-id=190-105798",
+      "checkedAt": "2026-09-19",
+      "method": "browser_visual_read",
+      "figmaNodeId": "190:105798",
+      "previewPath": null,
+      "previewStatus": "not_saved"
+    },
+    {
+      "id": "yandex-icon-roles",
+      "title": "11_5: роль графики",
+      "kind": "evidence_location",
+      "parentId": "yandex-guide",
+      "url": "https://www.figma.com/design/neqcTLDL5JGobZl1Zhzskn/%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81-%D0%9D%D0%BE%D0%B2%D0%B8%D1%87%D0%BA%D0%B8--work-?node-id=190-104737",
+      "checkedAt": "2026-09-19",
+      "method": "browser_visual_read",
+      "figmaNodeId": "190:104737",
+      "previewPath": null,
+      "previewStatus": "not_saved"
+    },
+    {
+      "id": "yandex-large-crop",
+      "title": "10_6: крупное кадрирование",
+      "kind": "evidence_location",
+      "parentId": "yandex-guide",
+      "url": "https://www.figma.com/design/neqcTLDL5JGobZl1Zhzskn/%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81-%D0%9D%D0%BE%D0%B2%D0%B8%D1%87%D0%BA%D0%B8--work-?node-id=190-103590",
+      "checkedAt": "2026-09-19",
+      "method": "browser_visual_read",
+      "figmaNodeId": "190:103590",
+      "previewPath": null,
+      "previewStatus": "not_saved"
+    },
+    {
+      "id": "yandex-type-context",
+      "title": "9_2: типографика вне веба",
+      "kind": "evidence_location",
+      "parentId": "yandex-guide",
+      "url": "https://www.figma.com/design/neqcTLDL5JGobZl1Zhzskn/%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81-%D0%9D%D0%BE%D0%B2%D0%B8%D1%87%D0%BA%D0%B8--work-?node-id=190-88545",
+      "checkedAt": "2026-09-19",
+      "method": "browser_visual_read",
+      "figmaNodeId": "190:88545",
+      "previewPath": null,
+      "previewStatus": "not_saved"
+    }
+  ],
+  "catalogue": [
+    {
+      "id": "F01",
+      "name": "Цветовые значения и роли",
+      "layer": "parameters",
+      "parameters": [
+        "Палитры и шкалы оттенков",
+        "Фон, текст, акцент, служебный сигнал",
+        "Алиасы токенов",
+        "Цветовое пространство и значения для носителей",
+        "Светлая и тёмная версии"
+      ],
+      "basisReferenceIds": [
+        "material3",
+        "atlassian-tokens",
+        "uswds"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "F02",
+      "name": "Цветовые отношения и градиенты",
+      "layer": "parameters",
+      "parameters": [
+        "Разрешённые пары",
+        "Пропорции цветов",
+        "Контраст",
+        "Стопы, направление, зона и вид градиента",
+        "Дуотон, тонирование и цветовые акценты в фото"
+      ],
+      "basisReferenceIds": [
+        "yandex-guide",
+        "redhat-hybrid"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "F03",
+      "name": "Шрифтовые семейства",
+      "layer": "parameters",
+      "parameters": [
+        "Гарнитура и начертание",
+        "Вариативные оси ширины и насыщенности",
+        "Поддержка письменностей",
+        "Резервная гарнитура",
+        "Оптический размер и доступность файла шрифта"
+      ],
+      "basisReferenceIds": [
+        "dropbox-type",
+        "spectrum-international"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "F04",
+      "name": "Набор и текстовые стили",
+      "layer": "parameters",
+      "parameters": [
+        "Роли текста",
+        "Кегль, интерлиньяж и трекинг",
+        "Регистр и выравнивание",
+        "Интервалы абзацев, маркеры, отступы",
+        "Длина строки, переносы, базовая линия, цифры"
+      ],
+      "basisReferenceIds": [
+        "carbon-type",
+        "uswds-type",
+        "yandex-guide"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "F05",
+      "name": "Размеры, интервалы и плотность",
+      "layer": "parameters",
+      "parameters": [
+        "Шкалы размеров и отступов",
+        "Внутренние и внешние интервалы",
+        "Минимумы и максимумы",
+        "Пропорции и режим плотности",
+        "Что масштабируется и какие есть исключения"
+      ],
+      "basisReferenceIds": [
+        "carbon-grid",
+        "spectrum-scale"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "F06",
+      "name": "Форматы и сетки",
+      "layer": "parameters",
+      "parameters": [
+        "Пропорции носителя",
+        "Поля и безопасные зоны",
+        "Колонки, строки, межколонники",
+        "Направляющие и вложенные сетки",
+        "Модуль и привязки между страницами"
+      ],
+      "basisReferenceIds": [
+        "carbon-grid",
+        "nasa-1976"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "F07",
+      "name": "Базовая геометрия и линии",
+      "layer": "parameters",
+      "parameters": [
+        "Радиусы отдельных углов и сглаживание",
+        "Пропорции простых фигур",
+        "Толщина, положение и окончания обводки",
+        "Штрихи и соединения линий",
+        "Стрелки, направляющие и разделители"
+      ],
+      "basisReferenceIds": [
+        "material3",
+        "google-shapes",
+        "fluent-icons"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "F08",
+      "name": "Поверхности, материалы и эффекты",
+      "layer": "parameters",
+      "parameters": [
+        "Заливки, прозрачность и смешивание",
+        "Внешние и внутренние тени",
+        "Размытие, свечение, зерно",
+        "Стекло, матовая поверхность, металл",
+        "Свет, глубина и порядок слоёв"
+      ],
+      "basisReferenceIds": [
+        "fluent-material",
+        "redhat-3d"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "A01",
+      "name": "Идентификаторы бренда",
+      "layer": "visual_asset",
+      "parameters": [
+        "Знак и словесная часть",
+        "Дескрипторы и подписи",
+        "Суббренды и партнёрские связки",
+        "Цветовые версии",
+        "Охранное поле, минимум размера, визуальный вес"
+      ],
+      "basisReferenceIds": [
+        "dropbox-logo",
+        "mailchimp",
+        "slack-2020"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "A02",
+      "name": "Иконки, пиктограммы и символы",
+      "layer": "visual_asset",
+      "parameters": [
+        "Назначение и уровень детализации",
+        "Контурная и залитая версия",
+        "Оптическое центрирование",
+        "Размерные версии",
+        "Маркеры, буквенные и цифровые символы"
+      ],
+      "basisReferenceIds": [
+        "carbon-pictograms",
+        "fluent-icons",
+        "yandex-guide"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "A03",
+      "name": "Нестандартные формы",
+      "layer": "visual_asset",
+      "parameters": [
+        "Конкретный контур или группа контуров",
+        "Вырезы, выступы, асимметрия",
+        "Связь с фирменным мотивом",
+        "Целая форма и самостоятельные части",
+        "Предусмотренные варианты"
+      ],
+      "basisReferenceIds": [
+        "google-shapes",
+        "redhat-hybrid",
+        "yandex-guide"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "A04",
+      "name": "Маски, окна и рамки",
+      "layer": "visual_asset",
+      "parameters": [
+        "Граница маски",
+        "Связь с изображением",
+        "Внутренняя безопасная область",
+        "Разрешённый выход за край",
+        "Связанные слои обтравки и тени"
+      ],
+      "basisReferenceIds": [
+        "google-shapes",
+        "redhat-hybrid",
+        "yandex-guide"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "A05",
+      "name": "Паттерны, текстуры и орнаменты",
+      "layer": "visual_asset",
+      "parameters": [
+        "Модуль повторения",
+        "Шаг, направление и масштаб",
+        "Плотность и контраст",
+        "Бесшовность",
+        "Условия применения как фона"
+      ],
+      "basisReferenceIds": [
+        "atlassian-illustrations",
+        "dropbox-imagery"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "A06",
+      "name": "Полные фотографии",
+      "layer": "visual_asset",
+      "parameters": [
+        "Портрет, предмет, среда, событие",
+        "Сюжет и роль",
+        "Свет, температура, палитра, контраст",
+        "Фокус, глубина резкости и свободное место",
+        "Связь с фотосерией"
+      ],
+      "basisReferenceIds": [
+        "dropbox-imagery",
+        "slack-2020",
+        "yandex-guide"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "A07",
+      "name": "Фотофрагменты и вырезанные объекты",
+      "layer": "visual_asset",
+      "parameters": [
+        "Исходник и точная область",
+        "Прямоугольный crop либо маска силуэта",
+        "Часть объекта, фактура или участок среды",
+        "Точка внимания и защищённая область",
+        "Прозрачность, минимальная видимая часть, разрешение"
+      ],
+      "basisReferenceIds": [
+        "redhat-hybrid",
+        "yandex-guide"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "A08",
+      "name": "Целые иллюстрации",
+      "layer": "visual_asset",
+      "parameters": [
+        "Сюжет и смысл",
+        "Сложность, масштаб и назначение",
+        "Линия, заливка и палитра",
+        "Перспектива и фактура",
+        "Целостность и возможность разборки"
+      ],
+      "basisReferenceIds": [
+        "atlassian-illustrations",
+        "dropbox-imagery",
+        "redhat-illustration"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "A09",
+      "name": "Части иллюстраций",
+      "layer": "visual_asset",
+      "parameters": [
+        "Конкретный объект или группа слоёв",
+        "Фрагмент персонажа или окружения",
+        "Исходная композиция",
+        "Границы и самостоятельность",
+        "Совместимые части и правила стыковки"
+      ],
+      "basisReferenceIds": [
+        "slack-2020",
+        "redhat-illustration"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "A10",
+      "name": "Персонажи и маскоты",
+      "layer": "visual_asset",
+      "parameters": [
+        "Поза, эмоция, ракурс",
+        "Пропорции и характерные черты",
+        "Одежда и аксессуары",
+        "Допустимые действия и роли",
+        "Разрешённые реплики либо запрет речи"
+      ],
+      "basisReferenceIds": [
+        "mailchimp-voice",
+        "redhat-illustration"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "A11",
+      "name": "3D-объекты и рендеры",
+      "layer": "visual_asset",
+      "parameters": [
+        "Объект, сцена или готовый рендер",
+        "Материал и освещение",
+        "Камера, ракурс и перспектива",
+        "Вариант цвета и прозрачный фон",
+        "Способ формообразования и допустимое кадрирование"
+      ],
+      "basisReferenceIds": [
+        "redhat-3d",
+        "yandex-guide"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "A12",
+      "name": "Изображения интерфейсов и материалов",
+      "layer": "visual_asset",
+      "parameters": [
+        "Полный экран, деталь UI или условное представление",
+        "Мокап устройства и слот содержимого",
+        "Документ, файл, рисунок, билет",
+        "Реальный контент и допустимое упрощение",
+        "Перспектива, подпись и рамка"
+      ],
+      "basisReferenceIds": [
+        "dropbox-imagery",
+        "yandex-guide"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "C01",
+      "name": "Текстовые конструкции",
+      "layer": "construction",
+      "parameters": [
+        "Заголовок с пояснением",
+        "Цитата с автором",
+        "Список и выноска",
+        "Сноска и источник",
+        "Обязательные слоты и ограничения наполнения"
+      ],
+      "basisReferenceIds": [
+        "uswds-type",
+        "uswds-summary"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "C02",
+      "name": "Конструкции для фактов и данных",
+      "layer": "construction",
+      "parameters": [
+        "Число, единица и подпись",
+        "Показатель и сравнение",
+        "Легенды и обозначения",
+        "Оформление существующих таблиц и графиков",
+        "Связь с исходным значением"
+      ],
+      "basisReferenceIds": [
+        "carbon-data",
+        "uswds-summary"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "C03",
+      "name": "Молекулы с изображением",
+      "layer": "construction",
+      "parameters": [
+        "Фото с подписью",
+        "Портрет с ролью",
+        "Вырезанный объект с подложкой",
+        "Иллюстрация с тезисом",
+        "Вложенные элементы, слоты и принятые варианты"
+      ],
+      "basisReferenceIds": [
+        "slack-2020",
+        "yandex-guide"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "C04",
+      "name": "Коллажи и многослойные сборки",
+      "layer": "construction",
+      "parameters": [
+        "Фокус и вспомогательные части",
+        "Число элементов",
+        "Перекрытия и порядок слоёв",
+        "Согласование ракурса, света и масштаба",
+        "Маски, опоры и точки стыковки"
+      ],
+      "basisReferenceIds": [
+        "redhat-hybrid",
+        "yandex-guide"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "C05",
+      "name": "Навигационные и служебные блоки",
+      "layer": "construction",
+      "parameters": [
+        "Номер слайда и раздела",
+        "Подпись спикера",
+        "Дата, рубрика, тег и источник",
+        "Индикатор последовательности",
+        "Подвал, разделитель и брендовая подпись"
+      ],
+      "basisReferenceIds": [
+        "nasa-1976",
+        "slack-2020",
+        "uswds-process"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "C06",
+      "name": "Композиционные схемы",
+      "layer": "construction",
+      "parameters": [
+        "Обложка, разделитель, содержание, итог",
+        "Главная и вспомогательные области",
+        "Фиксированные зоны и свободные слоты",
+        "Читаемый путь по слайду",
+        "Варианты под формат и объём содержания"
+      ],
+      "basisReferenceIds": [
+        "carbon-grid",
+        "nasa-1976",
+        "yandex-guide"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "C07",
+      "name": "Последовательности и серии",
+      "layer": "construction",
+      "parameters": [
+        "Этапы процесса и временная линия",
+        "Переход от общего к деталям",
+        "Ритм серии",
+        "Повторяющиеся опоры и акценты",
+        "Связь обложки и внутренних слайдов"
+      ],
+      "basisReferenceIds": [
+        "uswds-process",
+        "nasa-1976"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "R01",
+      "name": "Смысловая и визуальная роль",
+      "layer": "usage_rule",
+      "parameters": [
+        "Что обозначает элемент",
+        "Фон, акцент, навигация, иллюстрация",
+        "Связь с текстом",
+        "Сила акцента и иерархия",
+        "Одна форма в нескольких ролях"
+      ],
+      "basisReferenceIds": [
+        "atlassian-tokens",
+        "atlassian-illustrations",
+        "yandex-guide"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "R02",
+      "name": "Разрешённые преобразования",
+      "layer": "usage_rule",
+      "parameters": [
+        "Масштабирование и растяжение раздельно",
+        "Поворот и отражение",
+        "Перекраска и кадрирование",
+        "Разборка, замена частей, выход за край",
+        "Разрешено, запрещено, неизвестно"
+      ],
+      "basisReferenceIds": [
+        "carbon-pictograms",
+        "redhat-hybrid",
+        "yandex-guide"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "R03",
+      "name": "Сочетаемость и отношения",
+      "layer": "usage_rule",
+      "parameters": [
+        "Что можно помещать рядом и внутрь",
+        "Фон и передний план",
+        "Совместимость света и перспективы",
+        "Зазор, перекрытие, оптический баланс",
+        "Обязательные пары и запрещённые комбинации"
+      ],
+      "basisReferenceIds": [
+        "carbon-pictograms",
+        "redhat-3d",
+        "yandex-guide"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "R04",
+      "name": "Адаптация и вместимость",
+      "layer": "usage_rule",
+      "parameters": [
+        "Минимум и максимум наполнения",
+        "Перенос и переполнение",
+        "Что сохраняется при смене формата",
+        "Перевод и направление чтения",
+        "Допустимые варианты и исключения"
+      ],
+      "basisReferenceIds": [
+        "spectrum-scale",
+        "spectrum-international",
+        "uswds-summary"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "R05",
+      "name": "Движение и временные правила",
+      "layer": "usage_rule",
+      "parameters": [
+        "Порядок появления",
+        "Длительность и задержка",
+        "Траектория и easing",
+        "Переходы и перенос опорных элементов",
+        "Статичный и reduced-motion вариант"
+      ],
+      "basisReferenceIds": [
+        "fluent-motion",
+        "slack-2020"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "R06",
+      "name": "Вербальная подача",
+      "layer": "usage_rule",
+      "parameters": [
+        "Голос и тон",
+        "Терминология и язык",
+        "Регистр и знаки препинания",
+        "Правила дат, чисел и единиц",
+        "Манера реплик и контекст аудитории"
+      ],
+      "basisReferenceIds": [
+        "atlassian-content",
+        "mailchimp-voice"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "R07",
+      "name": "Читаемость и доступность",
+      "layer": "usage_rule",
+      "parameters": [
+        "Контраст и размер в контексте",
+        "Порядок чтения",
+        "Смысл без опоры только на цвет",
+        "Альтернативное описание",
+        "Проверка на конкретном носителе"
+      ],
+      "basisReferenceIds": [
+        "mailchimp-accessibility",
+        "uswds"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "R08",
+      "name": "Контекст и профиль подачи",
+      "layer": "usage_rule",
+      "parameters": [
+        "Цель, аудитория, носитель",
+        "Плотность, ритм и выразительность",
+        "Разрешённая асимметрия и масштаб",
+        "Примеры и контрпримеры",
+        "Границы действия правил бренда и профиля"
+      ],
+      "basisReferenceIds": [
+        "carbon-type",
+        "redhat-hybrid",
+        "yandex-guide"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "R09",
+      "name": "Происхождение и состояние знания",
+      "layer": "usage_rule",
+      "parameters": [
+        "Источник и точный адрес примера",
+        "Редакция, дата, версия",
+        "Факт, наблюдение или гипотеза",
+        "Статус проверки и проектного принятия",
+        "Зависимости, разрешённая область использования и замены"
+      ],
+      "basisReferenceIds": [
+        "atlassian-tokens",
+        "nasa-1976",
+        "yandex-guide"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Синтез для нашего продукта; не утверждение, что все перечисленные поля заданы в каждом источнике."
+    },
+    {
+      "id": "R10",
+      "name": "Фотостиль",
+      "layer": "usage_rule",
+      "parameters": [
+        "Сюжет, герой, действие и окружение",
+        "Степень постановочности и характер эмоции",
+        "Ракурс, крупность, перспектива и кадрирование",
+        "Направление, жёсткость и цвет света",
+        "Палитра, насыщенность, контраст и тон",
+        "Фактура, зерно, резкость и глубина пространства",
+        "Обработка, ретушь, обтравка и размещение текста",
+        "Единство серии, сценарии применения и контрпримеры"
+      ],
+      "basisReferenceIds": [
+        "photostyle-article",
+        "yandex-guide",
+        "redhat-hybrid"
+      ],
+      "classificationStatus": "proposed",
+      "note": "Отдельное описание языка фотографий, связанное с конкретными фото и фрагментами A06/A07."
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "K01",
+      "kind": "source_rule",
+      "name": "Варианты фотостиля по задаче",
+      "scope": {
+        "brand": "Яндекс Реклама",
+        "sourceId": "yandex-guide",
+        "familyIds": [
+          "R10",
+          "A06"
+        ],
+        "context": "рабочий гайд"
+      },
+      "summary": "Светлая и контрастная подача имеют разные коммуникационные назначения.",
+      "evidenceReferenceIds": [
+        "yandex-photo-modes"
+      ],
+      "payload": {
+        "dimension": "photoStyleVariants",
+        "selectionBy": "communicationPurpose"
+      },
+      "version": 1,
+      "reviewStatus": "source_checked",
+      "applicationStatus": "reference_only",
+      "reusableAsset": false
+    },
+    {
+      "id": "K02",
+      "kind": "source_rule",
+      "name": "Цвет бренда внутри фотографии",
+      "scope": {
+        "brand": "Яндекс Реклама",
+        "sourceId": "yandex-guide",
+        "familyIds": [
+          "R10",
+          "F02"
+        ],
+        "context": "фотография людей"
+      },
+      "summary": "Фирменные цветовые акценты используются внутри фотостиля.",
+      "evidenceReferenceIds": [
+        "yandex-photo-color"
+      ],
+      "payload": {
+        "dimension": "photoColorAccents"
+      },
+      "version": 1,
+      "reviewStatus": "source_checked",
+      "applicationStatus": "reference_only",
+      "reusableAsset": false
+    },
+    {
+      "id": "K03",
+      "kind": "source_rule",
+      "name": "Полный кадр и вырезанный предмет",
+      "scope": {
+        "brand": "Яндекс Реклама",
+        "sourceId": "yandex-guide",
+        "familyIds": [
+          "A06",
+          "A07",
+          "A04"
+        ],
+        "context": "предметные фото"
+      },
+      "summary": "Предметное фото может использоваться в исходном окружении или как отделённый объект.",
+      "evidenceReferenceIds": [
+        "yandex-photo-cutout"
+      ],
+      "payload": {
+        "resourceRelation": "variant_of",
+        "variants": [
+          "full_image",
+          "cutout"
+        ]
+      },
+      "version": 1,
+      "reviewStatus": "source_checked",
+      "applicationStatus": "reference_only",
+      "reusableAsset": false
+    },
+    {
+      "id": "K04",
+      "kind": "visual_observation",
+      "name": "Образцы материалов предметной сцены",
+      "scope": {
+        "brand": "Яндекс Реклама",
+        "sourceId": "yandex-guide",
+        "familyIds": [
+          "R10",
+          "F08"
+        ],
+        "context": "предметная фотография"
+      },
+      "summary": "Фактура и материал выделены в самостоятельный набор визуальных образцов.",
+      "evidenceReferenceIds": [
+        "yandex-photo-material"
+      ],
+      "payload": {
+        "dimension": "materialLanguage"
+      },
+      "version": 1,
+      "reviewStatus": "source_checked",
+      "applicationStatus": "reference_only",
+      "reusableAsset": false
+    },
+    {
+      "id": "K05",
+      "kind": "source_rule",
+      "name": "Роль графики зависит от композиции",
+      "scope": {
+        "brand": "Яндекс Реклама",
+        "sourceId": "yandex-guide",
+        "familyIds": [
+          "A02",
+          "R01"
+        ],
+        "context": "акцентная иконка"
+      },
+      "summary": "Один тип графики рассматривается в нескольких композиционных ролях.",
+      "evidenceReferenceIds": [
+        "yandex-icon-roles"
+      ],
+      "payload": {
+        "roles": [
+          "background",
+          "illustration",
+          "navigation",
+          "typographic_composition"
+        ]
+      },
+      "version": 1,
+      "reviewStatus": "source_checked",
+      "applicationStatus": "reference_only",
+      "reusableAsset": false
+    },
+    {
+      "id": "K06",
+      "kind": "source_rule",
+      "name": "Крупный фрагмент объёмной графики",
+      "scope": {
+        "brand": "Яндекс Реклама",
+        "sourceId": "yandex-guide",
+        "familyIds": [
+          "A11",
+          "R02"
+        ],
+        "context": "абстрактная 3D-графика"
+      },
+      "summary": "Для объёмной абстрактной графики показано предпочтение крупного кадрирования.",
+      "evidenceReferenceIds": [
+        "yandex-large-crop"
+      ],
+      "payload": {
+        "operation": "crop",
+        "value": "large_fragment"
+      },
+      "version": 1,
+      "reviewStatus": "source_checked",
+      "applicationStatus": "reference_only",
+      "reusableAsset": false
+    },
+    {
+      "id": "K07",
+      "kind": "source_rule",
+      "name": "Типографическое исключение по носителю",
+      "scope": {
+        "brand": "Яндекс Реклама",
+        "sourceId": "yandex-guide",
+        "familyIds": [
+          "F04",
+          "R04"
+        ],
+        "context": "макеты кроме веба"
+      },
+      "summary": "Правило интервалов ограничено типом носителя.",
+      "evidenceReferenceIds": [
+        "yandex-type-context"
+      ],
+      "payload": {
+        "excludedMedia": [
+          "web"
+        ]
+      },
+      "version": 1,
+      "reviewStatus": "source_checked",
+      "applicationStatus": "reference_only",
+      "reusableAsset": false
+    },
+    {
+      "id": "K08",
+      "kind": "source_rule",
+      "name": "Граница кадрирования пиктограммы",
+      "scope": {
+        "brand": "IBM Carbon",
+        "familyIds": [
+          "A02",
+          "R02"
+        ],
+        "context": "пиктограмма в контейнере"
+      },
+      "summary": "Обрезка пиктограммы контейнером запрещена.",
+      "evidenceReferenceIds": [
+        "carbon-pictograms"
+      ],
+      "payload": {
+        "operation": "crop",
+        "permission": "forbidden"
+      },
+      "version": 1,
+      "reviewStatus": "source_checked",
+      "applicationStatus": "reference_only",
+      "reusableAsset": false
+    },
+    {
+      "id": "K09",
+      "kind": "source_rule",
+      "name": "Преобразования фирменной формы",
+      "scope": {
+        "brand": "Red Hat",
+        "familyIds": [
+          "A03",
+          "R02"
+        ],
+        "context": "Hybrid style: base shapes"
+      },
+      "summary": "Для исходной геометрии заданы разные разрешения на преобразования.",
+      "evidenceReferenceIds": [
+        "redhat-hybrid"
+      ],
+      "payload": {
+        "allowed": [
+          "scale",
+          "rotate",
+          "flip"
+        ],
+        "forbidden": [
+          "distort",
+          "change_corner_radii",
+          "combine_into_new_shape"
+        ]
+      },
+      "version": 1,
+      "reviewStatus": "source_checked",
+      "applicationStatus": "reference_only",
+      "reusableAsset": false
+    },
+    {
+      "id": "K10",
+      "kind": "method_hypothesis",
+      "name": "Фотоэффект и физический параметр съёмки",
+      "scope": {
+        "familyIds": [
+          "R10"
+        ],
+        "context": "визуальное извлечение без метаданных"
+      },
+      "summary": "Описывать видимый результат; точные параметры камеры принимать только из подтверждённого источника.",
+      "evidenceReferenceIds": [
+        "photostyle-article"
+      ],
+      "payload": {
+        "unknownWithoutMetadata": [
+          "camera_model",
+          "lens_model",
+          "focal_length_mm",
+          "aperture",
+          "shutter",
+          "iso",
+          "lut"
+        ]
+      },
+      "version": 1,
+      "reviewStatus": "proposed",
+      "applicationStatus": "reference_only",
+      "reusableAsset": false
+    },
+    {
+      "id": "K11",
+      "kind": "method_hypothesis",
+      "name": "Пример, актив и профиль",
+      "scope": {
+        "familyIds": [
+          "A06",
+          "A07",
+          "R10"
+        ],
+        "context": "модель данных продукта"
+      },
+      "summary": "Хранить фотографию, её фрагмент, профиль фотостиля и доказательный пример как связанные сущности.",
+      "evidenceReferenceIds": [
+        "yandex-photo-modes",
+        "yandex-photo-cutout"
+      ],
+      "payload": {
+        "relations": [
+          "fragment_of",
+          "example_of",
+          "variant_of",
+          "compatible_with"
+        ]
+      },
+      "version": 1,
+      "reviewStatus": "proposed",
+      "applicationStatus": "reference_only",
+      "reusableAsset": false
+    }
+  ],
+  "photoStyleDimensions": [
+    "task_and_genre",
+    "subject_and_action",
+    "visible_person_presentation",
+    "environment_and_props",
+    "lighting",
+    "color",
+    "viewpoint_and_perspective",
+    "composition_and_crop",
+    "focus_and_depth",
+    "texture_and_processing",
+    "dynamics",
+    "stylization",
+    "series_consistency",
+    "layout_usage"
+  ],
+  "resourceFiles": []
+}

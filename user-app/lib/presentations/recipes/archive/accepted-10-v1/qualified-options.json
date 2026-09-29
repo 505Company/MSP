@@ -1,0 +1,1363 @@
+{
+  "evidence-mosaic-05--2": {
+    "schemaVersion": 1,
+    "id": "evidence-mosaic-05",
+    "name": "Четыре показателя · короткий тезис",
+    "status": "candidate",
+    "review": {
+      "human": "pending",
+      "technical": "pending",
+      "visual": "pending"
+    },
+    "origin": {
+      "kind": "user-reference",
+      "file": "reference-3.png",
+      "region": "middle slide of 3",
+      "author": "Codex",
+      "content": "Synthetic Russian demonstration, not source facts"
+    },
+    "canvas": {
+      "width": 1920,
+      "height": 1080
+    },
+    "requiredResourceRoles": [
+      "panel",
+      "art1"
+    ],
+    "intent": "Тезис и мозаика показателей",
+    "adaptation": [
+      "Слева тезис и3вторичныхпоказателя; справа2главныхпоказателя и полоса изображения.",
+      "Число всегда связано со своей единицей и подписью.",
+      "Оговорка о плановых значениях обязательна; графика не кодирует числовые данные.",
+      "Не заменять пять разных показателей пятью одинаковыми карточками."
+    ],
+    "capacity": {
+      "overflow": "reject-or-select-other-recipe",
+      "fontShrinking": false,
+      "bodyMinFontSize": 28
+    },
+    "elements": [
+      {
+        "id": "eyebrow",
+        "kind": "text",
+        "slot": "eyebrow",
+        "x": 80,
+        "y": 66,
+        "width": 880,
+        "height": 38,
+        "fontSize": 26,
+        "fontStyle": "Regular",
+        "lineHeight": 112,
+        "colorRole": "purple",
+        "maxLines": 1,
+        "maxChars": 180
+      },
+      {
+        "id": "title",
+        "kind": "text",
+        "slot": "title",
+        "x": 80,
+        "y": 148,
+        "width": 860,
+        "height": 240,
+        "fontSize": 80,
+        "fontStyle": "Bold",
+        "lineHeight": 108,
+        "colorRole": "ink",
+        "maxLines": 2,
+        "maxChars": 45
+      },
+      {
+        "id": "body",
+        "kind": "text",
+        "slot": "body",
+        "x": 80,
+        "y": 430,
+        "width": 825,
+        "height": 158,
+        "fontSize": 32,
+        "fontStyle": "Regular",
+        "lineHeight": 112,
+        "colorRole": "ink",
+        "maxLines": 4,
+        "maxChars": 180,
+        "after": {
+          "target": "title",
+          "axis": "y",
+          "gap": 32
+        }
+      },
+      {
+        "id": "metric-panel-a",
+        "kind": "asset",
+        "resourceRole": "panel",
+        "x": 1000,
+        "y": 0,
+        "width": 460,
+        "height": 550,
+        "colorRole": "white"
+      },
+      {
+        "id": "metric-panel-b",
+        "kind": "asset",
+        "resourceRole": "panel",
+        "x": 1460,
+        "y": 0,
+        "width": 460,
+        "height": 550,
+        "colorRole": "purple"
+      },
+      {
+        "id": "a-context",
+        "kind": "text",
+        "slot": "aContext",
+        "x": 1052,
+        "y": 80,
+        "width": 356,
+        "height": 158,
+        "fontSize": 30,
+        "fontStyle": "Regular",
+        "lineHeight": 112,
+        "colorRole": "ink",
+        "maxLines": 4,
+        "maxChars": 180
+      },
+      {
+        "id": "a-value",
+        "kind": "text",
+        "slot": "aValue",
+        "x": 1052,
+        "y": 340,
+        "width": 356,
+        "height": 96,
+        "fontSize": 76,
+        "fontStyle": "Regular",
+        "lineHeight": 112,
+        "colorRole": "ink",
+        "maxLines": 1,
+        "maxChars": 10
+      },
+      {
+        "id": "a-label",
+        "kind": "text",
+        "slot": "aLabel",
+        "x": 1052,
+        "y": 458,
+        "width": 356,
+        "height": 72,
+        "fontSize": 26,
+        "fontStyle": "Regular",
+        "lineHeight": 112,
+        "colorRole": "ink",
+        "maxLines": 2,
+        "maxChars": 180,
+        "after": {
+          "target": "a-value",
+          "axis": "y",
+          "gap": 20
+        }
+      },
+      {
+        "id": "b-context",
+        "kind": "text",
+        "slot": "bContext",
+        "x": 1512,
+        "y": 80,
+        "width": 356,
+        "height": 158,
+        "fontSize": 30,
+        "fontStyle": "Regular",
+        "lineHeight": 112,
+        "colorRole": "text",
+        "maxLines": 4,
+        "maxChars": 180
+      },
+      {
+        "id": "b-value",
+        "kind": "text",
+        "slot": "bValue",
+        "x": 1512,
+        "y": 340,
+        "width": 356,
+        "height": 96,
+        "fontSize": 76,
+        "fontStyle": "Regular",
+        "lineHeight": 112,
+        "colorRole": "text",
+        "maxLines": 1,
+        "maxChars": 10
+      },
+      {
+        "id": "b-label",
+        "kind": "text",
+        "slot": "bLabel",
+        "x": 1512,
+        "y": 458,
+        "width": 356,
+        "height": 72,
+        "fontSize": 26,
+        "fontStyle": "Regular",
+        "lineHeight": 112,
+        "colorRole": "text",
+        "maxLines": 2,
+        "maxChars": 180,
+        "after": {
+          "target": "b-value",
+          "axis": "y",
+          "gap": 20
+        }
+      },
+      {
+        "id": "visual",
+        "kind": "asset",
+        "resourceRole": "art1",
+        "x": 1000,
+        "y": 550,
+        "width": 920,
+        "height": 440,
+        "imageFit": "cover",
+        "focusX": 0.5,
+        "focusY": 0.5
+      },
+      {
+        "id": "value-0",
+        "kind": "text",
+        "slot": "value1",
+        "x": 80,
+        "y": 776,
+        "width": 406,
+        "height": 94,
+        "fontSize": 68,
+        "fontStyle": "Regular",
+        "lineHeight": 112,
+        "colorRole": "ink",
+        "maxLines": 1,
+        "maxChars": 10
+      },
+      {
+        "id": "label-0",
+        "kind": "text",
+        "slot": "label1",
+        "x": 80,
+        "y": 892,
+        "width": 406,
+        "height": 94,
+        "fontSize": 26,
+        "fontStyle": "Regular",
+        "lineHeight": 112,
+        "colorRole": "ink",
+        "maxLines": 3,
+        "maxChars": 58
+      },
+      {
+        "id": "divider-1",
+        "kind": "line",
+        "x": 506,
+        "y": 776,
+        "width": 0,
+        "height": 156,
+        "endX": 506,
+        "endY": 932,
+        "strokeRole": "muted",
+        "strokeWidth": 2
+      },
+      {
+        "id": "value-1",
+        "kind": "text",
+        "slot": "value2",
+        "x": 530,
+        "y": 776,
+        "width": 406,
+        "height": 94,
+        "fontSize": 68,
+        "fontStyle": "Regular",
+        "lineHeight": 112,
+        "colorRole": "ink",
+        "maxLines": 1,
+        "maxChars": 10
+      },
+      {
+        "id": "label-1",
+        "kind": "text",
+        "slot": "label2",
+        "x": 530,
+        "y": 892,
+        "width": 406,
+        "height": 94,
+        "fontSize": 26,
+        "fontStyle": "Regular",
+        "lineHeight": 112,
+        "colorRole": "ink",
+        "maxLines": 3,
+        "maxChars": 58
+      },
+      {
+        "id": "footer-rule",
+        "kind": "line",
+        "x": 80,
+        "y": 1010,
+        "width": 1760,
+        "height": 0,
+        "endX": 1840,
+        "endY": 1010,
+        "strokeRole": "muted",
+        "strokeWidth": 2
+      },
+      {
+        "id": "footer",
+        "kind": "text",
+        "slot": "footer",
+        "x": 80,
+        "y": 1028,
+        "width": 1760,
+        "height": 30,
+        "fontSize": 24,
+        "fontStyle": "Regular",
+        "lineHeight": 112,
+        "colorRole": "ink",
+        "maxLines": 1,
+        "maxChars": 180
+      }
+    ],
+    "resourceQueries": {
+      "panel": {
+        "roles": [
+          "surface"
+        ],
+        "terms": [
+          "прямоугольник",
+          "подложка",
+          "однородная"
+        ],
+        "exclude": [
+          "свотч"
+        ],
+        "contentSlots": []
+      },
+      "art1": {
+        "roles": [
+          "brand-motif"
+        ],
+        "terms": [
+          "абстрактная графика"
+        ],
+        "exclude": [
+          "букв",
+          "алфавит",
+          "логотип",
+          "скриншот"
+        ],
+        "contentSlots": [
+          "title",
+          "body"
+        ]
+      }
+    },
+    "revision": "detailed-1",
+    "variantId": "four-metrics",
+    "designContract": "./DESIGN.md",
+    "designRules": {
+      "version": 1,
+      "authority": "Authored reconstruction from middle ARENA/DFM reference slide; pixel-perfect source measurement not claimed",
+      "readingOrder": [
+        "title",
+        "leadEvidencePair",
+        "explanationAndArt",
+        "secondaryEvidence",
+        "qualification"
+      ],
+      "grid": {
+        "canvas": [
+          1920,
+          1080
+        ],
+        "leftInset": 80,
+        "leftContentRight": 936,
+        "interRegionGap": 64,
+        "rightRegion": [
+          1000,
+          0,
+          920,
+          990
+        ],
+        "leadColumns": {
+          "count": 2,
+          "width": 460,
+          "gap": 0,
+          "height": 550,
+          "paddingX": 52
+        },
+        "art": {
+          "box": [
+            1000,
+            550,
+            920,
+            440
+          ],
+          "required": true,
+          "fit": "cover",
+          "subjectMustRemainVisible": true
+        },
+        "secondaryThree": {
+          "x": [
+            80,
+            380,
+            680
+          ],
+          "textWidth": 256,
+          "dividersX": [
+            356,
+            656
+          ],
+          "valueY": 776,
+          "labelY": 892
+        },
+        "secondaryTwo": {
+          "x": [
+            80,
+            530
+          ],
+          "textWidth": 406,
+          "dividersX": [
+            506
+          ],
+          "valueY": 776,
+          "labelY": 892
+        },
+        "qualification": {
+          "ruleY": 1010,
+          "textBox": [
+            80,
+            1028,
+            1760,
+            30
+          ]
+        }
+      },
+      "relationships": [
+        {
+          "rule": "equal-top-and-bottom",
+          "elements": [
+            "metric-panel-a",
+            "metric-panel-b"
+          ]
+        },
+        {
+          "rule": "shared-edge",
+          "bottomOf": "metric-panel-a",
+          "topOf": "visual"
+        },
+        {
+          "rule": "shared-edge",
+          "bottomOf": "metric-panel-b",
+          "topOf": "visual"
+        },
+        {
+          "rule": "equal-text-top",
+          "elements": [
+            "a-value",
+            "b-value"
+          ]
+        },
+        {
+          "rule": "equal-text-top",
+          "elements": [
+            "a-label",
+            "b-label"
+          ]
+        },
+        {
+          "rule": "same-left-edge",
+          "elements": [
+            "eyebrow",
+            "title",
+            "body",
+            "value-0",
+            "label-0"
+          ]
+        },
+        {
+          "rule": "measured-min-gap",
+          "before": "title",
+          "after": "body",
+          "min": 32
+        },
+        {
+          "rule": "measured-min-gap",
+          "before": "a-value",
+          "after": "a-label",
+          "min": 20
+        },
+        {
+          "rule": "measured-min-gap",
+          "before": "b-value",
+          "after": "b-label",
+          "min": 20
+        }
+      ],
+      "typography": {
+        "normalTitle": {
+          "size": 64,
+          "lineHeightPercent": 112,
+          "weight": "Bold",
+          "maxLines": 3
+        },
+        "shortTitle": {
+          "size": 80,
+          "lineHeightPercent": 108,
+          "weight": "Bold",
+          "maxLines": 2
+        },
+        "explanation": {
+          "size": 32,
+          "lineHeightPercent": 112,
+          "weight": "Regular",
+          "maxLines": 4
+        },
+        "leadNumber": {
+          "size": 76,
+          "lineHeightPercent": 112,
+          "maxLines": 1
+        },
+        "leadPhrase": {
+          "size": 48,
+          "lineHeightPercent": 108,
+          "maxLines": 3
+        },
+        "secondaryNumber": {
+          "size": 68,
+          "lineHeightPercent": 112,
+          "maxLines": 1
+        },
+        "secondaryPhrase": {
+          "size": 40,
+          "lineHeightPercent": 112,
+          "maxLines": 2
+        },
+        "label": {
+          "size": 26,
+          "lineHeightPercent": 112,
+          "maxLines": 3
+        },
+        "qualification": {
+          "size": 24,
+          "lineHeightPercent": 112,
+          "maxLines": 1
+        },
+        "brandOptions": [
+          "regular-and-bold current brand sans",
+          "current brand serif title with sans labels after measurement",
+          "current brand condensed display without changing topology"
+        ],
+        "fontSubstitution": "Only from current brand; remeasure all slots. No implicit shrinking."
+      },
+      "variantEligibility": {
+        "five-metrics": {
+          "leadingMetricCount": 2,
+          "secondaryMetricCount": 3,
+          "requiresNumericInput": true,
+          "titleMaxLines": 3
+        },
+        "four-metrics": {
+          "leadingMetricCount": 2,
+          "secondaryMetricCount": 2,
+          "requiresNumericInput": true,
+          "titleMaxLines": 2
+        },
+        "qualitative": {
+          "leadingPhraseCount": 2,
+          "secondaryPhraseCount": 2,
+          "requiresNumericInput": false,
+          "leadingPhraseMaxLines": 3,
+          "secondaryPhraseMaxLines": 2
+        }
+      },
+      "contentPolicy": {
+        "copy": "Preserve every supplied fact, number, unit and qualification; demo text never becomes a source fact",
+        "missingSecondaryEvidence": "Reject these variants; no empty cell and no invented fact",
+        "overflow": "Measure with actual brand fonts; choose another authored variant or report incompatibility",
+        "longQualification": "Needs separately authored two-line-footer variant, not currently supplied",
+        "threeLongQuestions": "Incompatible: choose a question-led composition instead of forcing these cards"
+      },
+      "artPolicy": {
+        "allowed": [
+          "brand illustration",
+          "permitted subject photograph",
+          "brand abstract motif"
+        ],
+        "preserve": [
+          "large visible subject",
+          "wide visual mass directly beneath both cards",
+          "aspect ratio",
+          "important faces and subject contours"
+        ],
+        "missingArt": "Reject recipe. No plain panel fallback.",
+        "photoVsAbstract": "Same compositional role, distinct approved asset types; never claim abstract art is data visualization"
+      },
+      "forbiddenAdaptations": [
+        "replace mosaic with identical cards",
+        "remove image while keeping large empty region",
+        "move one leading value off the shared row",
+        "drop secondary facts to make room",
+        "invent numbers",
+        "shrink until text fits",
+        "copy reference logo without a current brand resource"
+      ],
+      "acceptance": {
+        "local": [
+          "all text fits",
+          "no text intersections",
+          "shared card/image edge",
+          "variant has exact supplied slot coverage"
+        ],
+        "visual": [
+          "title remains primary",
+          "leading facts read as a pair",
+          "secondary rail remains subordinate",
+          "image forms a continuous right-side mass"
+        ],
+        "native": "Pending: confirm component geometry, fonts, actual text measurements and image crop in Figma",
+        "human": "Pending"
+      }
+    },
+    "invariants": {
+      "majorSplitX": 1000,
+      "rightColumnWidth": 460,
+      "cardsBottom": 550,
+      "artBox": [
+        1000,
+        550,
+        920,
+        440
+      ],
+      "leftTextRight": 936,
+      "footerRuleY": 1010,
+      "requiredArt": true
+    }
+  },
+  "case-cards-02--3": {
+    "schemaVersion": 1,
+    "id": "case-cards-02",
+    "name": "Кейсы · 4 карточки",
+    "status": "candidate",
+    "review": {
+      "human": "pending",
+      "technical": "pending",
+      "native": "pending"
+    },
+    "origin": {
+      "kind": "user-image-reconstruction",
+      "reference": "case-cards-reference.png",
+      "notes": "User supplied reference; adapted from approximately4:3 to16:9. Russian copy by explicit user request; mini-guide colors/font/art. Not a Qwen output."
+    },
+    "canvas": {
+      "width": 1920,
+      "height": 1080
+    },
+    "intent": "case-studies",
+    "capacity": {
+      "cards": 4,
+      "questionMaxLines": 2,
+      "overflow": "reject"
+    },
+    "requiredResourceRoles": [
+      "panel",
+      "circle",
+      "art1",
+      "art2",
+      "art3"
+    ],
+    "elements": [
+      {
+        "id": "grid-0",
+        "kind": "line",
+        "x": 56,
+        "y": 0,
+        "width": 0,
+        "height": 1080,
+        "endX": 56,
+        "endY": 1080,
+        "strokeRole": "grid",
+        "strokeWidth": 1
+      },
+      {
+        "id": "grid-1",
+        "kind": "line",
+        "x": 356,
+        "y": 0,
+        "width": 0,
+        "height": 1080,
+        "endX": 356,
+        "endY": 1080,
+        "strokeRole": "grid",
+        "strokeWidth": 1
+      },
+      {
+        "id": "grid-2",
+        "kind": "line",
+        "x": 656,
+        "y": 0,
+        "width": 0,
+        "height": 1080,
+        "endX": 656,
+        "endY": 1080,
+        "strokeRole": "grid",
+        "strokeWidth": 1
+      },
+      {
+        "id": "grid-3",
+        "kind": "line",
+        "x": 956,
+        "y": 0,
+        "width": 0,
+        "height": 1080,
+        "endX": 956,
+        "endY": 1080,
+        "strokeRole": "grid",
+        "strokeWidth": 1
+      },
+      {
+        "id": "grid-4",
+        "kind": "line",
+        "x": 1256,
+        "y": 0,
+        "width": 0,
+        "height": 1080,
+        "endX": 1256,
+        "endY": 1080,
+        "strokeRole": "grid",
+        "strokeWidth": 1
+      },
+      {
+        "id": "grid-5",
+        "kind": "line",
+        "x": 1556,
+        "y": 0,
+        "width": 0,
+        "height": 1080,
+        "endX": 1556,
+        "endY": 1080,
+        "strokeRole": "grid",
+        "strokeWidth": 1
+      },
+      {
+        "id": "grid-6",
+        "kind": "line",
+        "x": 1856,
+        "y": 0,
+        "width": 0,
+        "height": 1080,
+        "endX": 1856,
+        "endY": 1080,
+        "strokeRole": "grid",
+        "strokeWidth": 1
+      },
+      {
+        "id": "cross-h",
+        "kind": "line",
+        "x": 32,
+        "y": 116,
+        "width": 48,
+        "height": 0,
+        "endX": 80,
+        "endY": 116,
+        "strokeRole": "muted",
+        "strokeWidth": 1
+      },
+      {
+        "id": "cross-v",
+        "kind": "line",
+        "x": 56,
+        "y": 92,
+        "width": 0,
+        "height": 48,
+        "endX": 56,
+        "endY": 140,
+        "strokeRole": "muted",
+        "strokeWidth": 1
+      },
+      {
+        "id": "heading",
+        "kind": "text",
+        "slot": "heading",
+        "x": 128,
+        "y": 64,
+        "width": 1664,
+        "height": 159,
+        "fontSize": 72,
+        "fontStyle": "Bold",
+        "colorRole": "accent",
+        "maxChars": 90,
+        "maxLines": 2,
+        "lineHeight": 110
+      },
+      {
+        "id": "footer-circle",
+        "kind": "asset",
+        "resourceRole": "circle",
+        "x": 108,
+        "y": 980,
+        "width": 56,
+        "height": 56
+      },
+      {
+        "id": "footer-arrow",
+        "kind": "line",
+        "x": 123,
+        "y": 1008,
+        "width": 25,
+        "height": 0,
+        "endX": 148,
+        "endY": 1008,
+        "strokeRole": "white",
+        "strokeWidth": 2
+      },
+      {
+        "id": "footer-arrow-up",
+        "kind": "line",
+        "x": 138,
+        "y": 998,
+        "width": 10,
+        "height": 10,
+        "endX": 148,
+        "endY": 1008,
+        "strokeRole": "white",
+        "strokeWidth": 2
+      },
+      {
+        "id": "footer-arrow-down",
+        "kind": "line",
+        "x": 138,
+        "y": 1018,
+        "width": 10,
+        "height": 10,
+        "endX": 148,
+        "endY": 1008,
+        "strokeRole": "white",
+        "strokeWidth": 2
+      },
+      {
+        "id": "footer-label",
+        "kind": "text",
+        "slot": "footer",
+        "x": 188,
+        "y": 994,
+        "width": 600,
+        "height": 36,
+        "fontSize": 26,
+        "fontStyle": "Regular",
+        "colorRole": "text",
+        "maxChars": 200,
+        "maxLines": 1,
+        "lineHeight": 110
+      },
+      {
+        "id": "card-0",
+        "kind": "asset",
+        "resourceRole": "panel",
+        "x": 108,
+        "y": 270,
+        "width": 840,
+        "height": 320,
+        "colorRole": "white",
+        "cornerRadii": [
+          20,
+          20,
+          20,
+          20
+        ]
+      },
+      {
+        "id": "category-0",
+        "kind": "text",
+        "slot": "category1",
+        "x": 148,
+        "y": 298,
+        "width": 760,
+        "height": 30,
+        "fontSize": 24,
+        "fontStyle": "Regular",
+        "lineHeight": 110,
+        "maxLines": 1,
+        "maxChars": 45,
+        "colorRole": "purple"
+      },
+      {
+        "id": "question-0",
+        "kind": "text",
+        "slot": "question1",
+        "x": 148,
+        "y": 346,
+        "width": 760,
+        "height": 75,
+        "fontSize": 34,
+        "fontStyle": "Regular",
+        "lineHeight": 110,
+        "maxLines": 2,
+        "maxChars": 90,
+        "colorRole": "ink"
+      },
+      {
+        "id": "marker-0",
+        "kind": "asset",
+        "resourceRole": "circle",
+        "x": 868,
+        "y": 434,
+        "width": 40,
+        "height": 40,
+        "colorRole": "purple"
+      },
+      {
+        "id": "plus-0-false",
+        "kind": "line",
+        "x": 879,
+        "y": 454,
+        "width": 18,
+        "height": 0,
+        "endX": 897,
+        "endY": 454,
+        "strokeRole": "white",
+        "strokeWidth": 2
+      },
+      {
+        "id": "plus-0-true",
+        "kind": "line",
+        "x": 888,
+        "y": 445,
+        "width": 0,
+        "height": 18,
+        "endX": 888,
+        "endY": 463,
+        "strokeRole": "white",
+        "strokeWidth": 2
+      },
+      {
+        "id": "art-0",
+        "kind": "asset",
+        "resourceRole": "art1",
+        "x": 108,
+        "y": 494,
+        "width": 840,
+        "height": 96,
+        "imageFit": "cover",
+        "focusX": 0.5,
+        "focusY": 0.5,
+        "cornerRadii": [
+          0,
+          0,
+          20,
+          20
+        ]
+      },
+      {
+        "id": "card-1",
+        "kind": "asset",
+        "resourceRole": "panel",
+        "x": 972,
+        "y": 270,
+        "width": 840,
+        "height": 320,
+        "colorRole": "white",
+        "cornerRadii": [
+          20,
+          20,
+          20,
+          20
+        ]
+      },
+      {
+        "id": "category-1",
+        "kind": "text",
+        "slot": "category2",
+        "x": 1012,
+        "y": 298,
+        "width": 760,
+        "height": 30,
+        "fontSize": 24,
+        "fontStyle": "Regular",
+        "lineHeight": 110,
+        "maxLines": 1,
+        "maxChars": 45,
+        "colorRole": "purple"
+      },
+      {
+        "id": "question-1",
+        "kind": "text",
+        "slot": "question2",
+        "x": 1012,
+        "y": 346,
+        "width": 760,
+        "height": 75,
+        "fontSize": 34,
+        "fontStyle": "Regular",
+        "lineHeight": 110,
+        "maxLines": 2,
+        "maxChars": 90,
+        "colorRole": "ink"
+      },
+      {
+        "id": "marker-1",
+        "kind": "asset",
+        "resourceRole": "circle",
+        "x": 1732,
+        "y": 434,
+        "width": 40,
+        "height": 40,
+        "colorRole": "purple"
+      },
+      {
+        "id": "plus-1-false",
+        "kind": "line",
+        "x": 1743,
+        "y": 454,
+        "width": 18,
+        "height": 0,
+        "endX": 1761,
+        "endY": 454,
+        "strokeRole": "white",
+        "strokeWidth": 2
+      },
+      {
+        "id": "plus-1-true",
+        "kind": "line",
+        "x": 1752,
+        "y": 445,
+        "width": 0,
+        "height": 18,
+        "endX": 1752,
+        "endY": 463,
+        "strokeRole": "white",
+        "strokeWidth": 2
+      },
+      {
+        "id": "art-1",
+        "kind": "asset",
+        "resourceRole": "art2",
+        "x": 972,
+        "y": 494,
+        "width": 840,
+        "height": 96,
+        "imageFit": "cover",
+        "focusX": 0.5,
+        "focusY": 0.5,
+        "cornerRadii": [
+          0,
+          0,
+          20,
+          20
+        ]
+      },
+      {
+        "id": "card-2",
+        "kind": "asset",
+        "resourceRole": "panel",
+        "x": 108,
+        "y": 614,
+        "width": 840,
+        "height": 320,
+        "colorRole": "white",
+        "cornerRadii": [
+          20,
+          20,
+          20,
+          20
+        ]
+      },
+      {
+        "id": "category-2",
+        "kind": "text",
+        "slot": "category3",
+        "x": 148,
+        "y": 642,
+        "width": 760,
+        "height": 30,
+        "fontSize": 24,
+        "fontStyle": "Regular",
+        "lineHeight": 110,
+        "maxLines": 1,
+        "maxChars": 45,
+        "colorRole": "purple"
+      },
+      {
+        "id": "question-2",
+        "kind": "text",
+        "slot": "question3",
+        "x": 148,
+        "y": 690,
+        "width": 760,
+        "height": 75,
+        "fontSize": 34,
+        "fontStyle": "Regular",
+        "lineHeight": 110,
+        "maxLines": 2,
+        "maxChars": 90,
+        "colorRole": "ink"
+      },
+      {
+        "id": "marker-2",
+        "kind": "asset",
+        "resourceRole": "circle",
+        "x": 868,
+        "y": 778,
+        "width": 40,
+        "height": 40,
+        "colorRole": "purple"
+      },
+      {
+        "id": "plus-2-false",
+        "kind": "line",
+        "x": 879,
+        "y": 798,
+        "width": 18,
+        "height": 0,
+        "endX": 897,
+        "endY": 798,
+        "strokeRole": "white",
+        "strokeWidth": 2
+      },
+      {
+        "id": "plus-2-true",
+        "kind": "line",
+        "x": 888,
+        "y": 789,
+        "width": 0,
+        "height": 18,
+        "endX": 888,
+        "endY": 807,
+        "strokeRole": "white",
+        "strokeWidth": 2
+      },
+      {
+        "id": "art-2",
+        "kind": "asset",
+        "resourceRole": "art3",
+        "x": 108,
+        "y": 838,
+        "width": 840,
+        "height": 96,
+        "imageFit": "cover",
+        "focusX": 0.5,
+        "focusY": 0.5,
+        "cornerRadii": [
+          0,
+          0,
+          20,
+          20
+        ]
+      },
+      {
+        "id": "card-3",
+        "kind": "asset",
+        "resourceRole": "panel",
+        "x": 972,
+        "y": 614,
+        "width": 840,
+        "height": 320,
+        "colorRole": "white",
+        "cornerRadii": [
+          20,
+          20,
+          20,
+          20
+        ]
+      },
+      {
+        "id": "category-3",
+        "kind": "text",
+        "slot": "category4",
+        "x": 1012,
+        "y": 642,
+        "width": 760,
+        "height": 30,
+        "fontSize": 24,
+        "fontStyle": "Regular",
+        "lineHeight": 110,
+        "maxLines": 1,
+        "maxChars": 45,
+        "colorRole": "purple"
+      },
+      {
+        "id": "question-3",
+        "kind": "text",
+        "slot": "question4",
+        "x": 1012,
+        "y": 690,
+        "width": 760,
+        "height": 75,
+        "fontSize": 34,
+        "fontStyle": "Regular",
+        "lineHeight": 110,
+        "maxLines": 2,
+        "maxChars": 90,
+        "colorRole": "ink"
+      },
+      {
+        "id": "marker-3",
+        "kind": "asset",
+        "resourceRole": "circle",
+        "x": 1732,
+        "y": 778,
+        "width": 40,
+        "height": 40,
+        "colorRole": "purple"
+      },
+      {
+        "id": "plus-3-false",
+        "kind": "line",
+        "x": 1743,
+        "y": 798,
+        "width": 18,
+        "height": 0,
+        "endX": 1761,
+        "endY": 798,
+        "strokeRole": "white",
+        "strokeWidth": 2
+      },
+      {
+        "id": "plus-3-true",
+        "kind": "line",
+        "x": 1752,
+        "y": 789,
+        "width": 0,
+        "height": 18,
+        "endX": 1752,
+        "endY": 807,
+        "strokeRole": "white",
+        "strokeWidth": 2
+      },
+      {
+        "id": "art-3",
+        "kind": "asset",
+        "resourceRole": "art1",
+        "x": 972,
+        "y": 838,
+        "width": 840,
+        "height": 96,
+        "imageFit": "cover",
+        "focusX": 0.8,
+        "focusY": 0.8,
+        "cornerRadii": [
+          0,
+          0,
+          20,
+          20
+        ]
+      }
+    ],
+    "revision": "detailed-1",
+    "variantId": "four",
+    "designRules": {
+      "version": 1,
+      "author": "Codex",
+      "canvas": [
+        1920,
+        1080
+      ],
+      "source": "../../v1/case-cards-reference.png",
+      "purpose": "Равноправные кейсы или вопросы; не последовательный процесс и не длинные объяснения.",
+      "invariants": {
+        "outerX": 108,
+        "columnGap": 24,
+        "cardBottom": 934,
+        "cardRadius": 20,
+        "questionBeforeMarker": true,
+        "artFullWidth": true,
+        "artMustNotMoveWithText": true,
+        "uniformSeamPerRow": true
+      },
+      "selection": {
+        "two": "2 самостоятельных вопроса, до 4 строк каждый",
+        "three": "3 вопроса, до 5 строк каждый",
+        "four": "4 коротких вопроса, до 2 строк каждый; сетка 2×2"
+      },
+      "typography": {
+        "heading": {
+          "size": 72,
+          "lineHeight": 110,
+          "maxLines": 2
+        },
+        "category": {
+          "size": 24,
+          "lineHeight": 110,
+          "maxLines": 1
+        },
+        "question": {
+          "two": 48,
+          "three": 40,
+          "four": 34,
+          "lineHeight": 110
+        },
+        "footer": {
+          "size": 26,
+          "lineHeight": 110,
+          "maxLines": 1
+        }
+      },
+      "spacing": {
+        "categoryToQuestionMin": 20,
+        "questionToMarkerMin": {
+          "two": 24,
+          "three": 24,
+          "four": 12
+        },
+        "markerToArt": 20,
+        "footerFromCards": 46
+      },
+      "resources": {
+        "panel": "Светлая фирменная карточка; скругление 20, без текста исходного компонента",
+        "circle": "Реальный круглый компонент. При отсутствии ресурса — ошибка привязки, не квадрат",
+        "art": "Изображения текущей библиотеки без встроенного текста. Cover с сохранением пропорций; полосы обязательны. Не повторять один кроп на соседних карточках."
+      },
+      "adaptation": {
+        "short": "Сохранить свободное место под вопросом; не растягивать текст и не поднимать полосу",
+        "long": "Сначала другой вариант/рецепт; без уменьшения шрифта, обрезки текста и самовольного сокращения",
+        "missingCategory": "Запросить структурную метку у модели из смысла контента; не придумывать факты",
+        "footer": "Показывать только при наличии реального следующего действия; весь footer удаляется как группа, карточки остаются на месте",
+        "brand": "Сохранять сетку и иерархию; шрифт/цвет/графика из текущей библиотеки, после смены шрифта повторить измерения"
+      },
+      "runtimeStatus": "Авторские правила; не все являются исполняемыми проверками текущего плагина. Native pending."
+    },
+    "cards": [
+      {
+        "index": 0,
+        "x": 108,
+        "y": 270,
+        "width": 840,
+        "height": 320,
+        "seam": 494,
+        "markerY": 434,
+        "questionMaxBottom": 422
+      },
+      {
+        "index": 1,
+        "x": 972,
+        "y": 270,
+        "width": 840,
+        "height": 320,
+        "seam": 494,
+        "markerY": 434,
+        "questionMaxBottom": 422
+      },
+      {
+        "index": 2,
+        "x": 108,
+        "y": 614,
+        "width": 840,
+        "height": 320,
+        "seam": 838,
+        "markerY": 778,
+        "questionMaxBottom": 766
+      },
+      {
+        "index": 3,
+        "x": 972,
+        "y": 614,
+        "width": 840,
+        "height": 320,
+        "seam": 838,
+        "markerY": 778,
+        "questionMaxBottom": 766
+      }
+    ]
+  }
+}

@@ -1,0 +1,433 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://msp.local/schemas/template-profile-draft.schema.json",
+  "title": "TemplateProfileDraft",
+  "description": "A reviewable, provenance-preserving design-system profile extracted from a PPTX template.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "draftId",
+    "source",
+    "generatedAt",
+    "profilerVersion",
+    "tokens",
+    "primitives",
+    "persistentElements",
+    "patterns",
+    "constructions",
+    "layouts",
+    "warnings"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "0.1.0"
+    },
+    "draftId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "$ref": "#/$defs/sourcePresentation"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "profilerVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:[-+][0-9A-Za-z.-]+)?$"
+    },
+    "tokens": {
+      "$ref": "#/$defs/tokenCatalog"
+    },
+    "primitives": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/primitive"
+      }
+    },
+    "persistentElements": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/persistentElement"
+      }
+    },
+    "patterns": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/pattern"
+      }
+    },
+    "constructions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/construction"
+      }
+    },
+    "layouts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/layout"
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/profileWarning"
+      }
+    }
+  },
+  "$defs": {
+    "sourcePresentation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fileName", "sha256", "slideCount", "slideSizeEmu"],
+      "properties": {
+        "fileName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{64}$"
+        },
+        "slideCount": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "slideSizeEmu": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["width", "height"],
+          "properties": {
+            "width": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "height": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      }
+    },
+    "box": {
+      "description": "Slide-relative geometry. All values are normalized to the inclusive 0..1 range.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y", "width", "height"],
+      "properties": {
+        "x": {"type": "number", "minimum": 0, "maximum": 1},
+        "y": {"type": "number", "minimum": 0, "maximum": 1},
+        "width": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "height": {"type": "number", "exclusiveMinimum": 0, "maximum": 1}
+      }
+    },
+    "sourceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["slideIndex", "objectIds"],
+      "properties": {
+        "slideIndex": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "objectIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "box": {
+          "$ref": "#/$defs/box"
+        }
+      }
+    },
+    "candidateStatus": {
+      "enum": ["candidate", "accepted", "rejected"]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "colorToken": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "hex", "roles", "usageCount", "sources"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "name": {"type": "string", "minLength": 1},
+        "hex": {"type": "string", "pattern": "^#[0-9A-Fa-f]{6}(?:[0-9A-Fa-f]{2})?$"},
+        "roles": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": ["background", "surface", "text", "accent", "border", "chart", "decorative", "unknown"]
+          }
+        },
+        "usageCount": {"type": "integer", "minimum": 1},
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/sourceRef"}
+        }
+      }
+    },
+    "typographyToken": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "fontFamily", "fontSizePt", "fontWeight", "italic", "roles", "usageCount", "sources"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "name": {"type": "string", "minLength": 1},
+        "fontFamily": {"type": "string", "minLength": 1},
+        "fontSizePt": {"type": "number", "exclusiveMinimum": 0},
+        "fontWeight": {"type": "integer", "minimum": 100, "maximum": 900, "multipleOf": 100},
+        "italic": {"type": "boolean"},
+        "lineHeight": {"type": "number", "exclusiveMinimum": 0},
+        "letterSpacingPt": {"type": "number"},
+        "roles": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": ["display", "title", "subtitle", "body", "caption", "label", "number", "unknown"]
+          }
+        },
+        "usageCount": {"type": "integer", "minimum": 1},
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/sourceRef"}
+        }
+      }
+    },
+    "spacingToken": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "value", "usageCount", "sources"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "name": {"type": "string", "minLength": 1},
+        "value": {
+          "description": "Fraction of the smaller slide dimension.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "usageCount": {"type": "integer", "minimum": 1},
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/sourceRef"}
+        }
+      }
+    },
+    "strokeToken": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "colorTokenId", "widthPt", "dashStyle", "usageCount", "sources"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "name": {"type": "string", "minLength": 1},
+        "colorTokenId": {"type": "string", "minLength": 1},
+        "widthPt": {"type": "number", "minimum": 0},
+        "dashStyle": {"enum": ["solid", "dash", "dot", "dashDot", "unknown"]},
+        "usageCount": {"type": "integer", "minimum": 1},
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/sourceRef"}
+        }
+      }
+    },
+    "tokenCatalog": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["colors", "typography", "spacing", "strokes"],
+      "properties": {
+        "colors": {"type": "array", "items": {"$ref": "#/$defs/colorToken"}},
+        "typography": {"type": "array", "items": {"$ref": "#/$defs/typographyToken"}},
+        "spacing": {"type": "array", "items": {"$ref": "#/$defs/spacingToken"}},
+        "strokes": {"type": "array", "items": {"$ref": "#/$defs/strokeToken"}}
+      }
+    },
+    "primitive": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "semanticRole", "box", "styleTokenIds", "source"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "objectName": {"type": "string", "minLength": 1},
+        "textPreview": {"type": "string", "maxLength": 240},
+        "kind": {
+          "enum": ["text", "image", "shape", "line", "group", "chart", "table", "smartArt", "media", "unknown"]
+        },
+        "semanticRole": {
+          "enum": ["title", "subtitle", "body", "caption", "label", "metric", "logo", "image", "icon", "divider", "background", "decoration", "unknown"]
+        },
+        "box": {"$ref": "#/$defs/box"},
+        "styleTokenIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "source": {"$ref": "#/$defs/sourceRef"},
+        "confidence": {"$ref": "#/$defs/confidence"}
+      }
+    },
+    "occurrence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "box", "primitiveIds"],
+      "properties": {
+        "source": {"$ref": "#/$defs/sourceRef"},
+        "box": {"$ref": "#/$defs/box"},
+        "primitiveIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "persistentElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "status", "occurrences", "confidence"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "label": {"type": "string", "minLength": 1},
+        "status": {"$ref": "#/$defs/candidateStatus"},
+        "occurrences": {
+          "type": "array",
+          "minItems": 2,
+          "items": {"$ref": "#/$defs/occurrence"}
+        },
+        "confidence": {"$ref": "#/$defs/confidence"}
+      }
+    },
+    "patternPart": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "allowedKinds", "box"],
+      "properties": {
+        "role": {"type": "string", "minLength": 1},
+        "allowedKinds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": ["text", "image", "shape", "line", "group", "chart", "table", "smartArt", "media", "unknown"]
+          }
+        },
+        "box": {"$ref": "#/$defs/box"},
+        "required": {"type": "boolean", "default": true}
+      }
+    },
+    "pattern": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "status", "parts", "occurrences", "confidence"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "label": {"type": "string", "minLength": 1},
+        "status": {"$ref": "#/$defs/candidateStatus"},
+        "parts": {
+          "type": "array",
+          "minItems": 2,
+          "items": {"$ref": "#/$defs/patternPart"}
+        },
+        "occurrences": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/occurrence"}
+        },
+        "confidence": {"$ref": "#/$defs/confidence"}
+      }
+    },
+    "construction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "status", "semanticRole", "patternIds", "primitiveRoles", "occurrences", "confidence"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "label": {"type": "string", "minLength": 1},
+        "status": {"$ref": "#/$defs/candidateStatus"},
+        "semanticRole": {
+          "enum": ["hero", "metric", "comparison", "list", "cards", "timeline", "process", "quote", "data", "media", "summary", "unknown"]
+        },
+        "patternIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "primitiveRoles": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "occurrences": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/occurrence"}
+        },
+        "confidence": {"$ref": "#/$defs/confidence"}
+      }
+    },
+    "layoutZone": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "role", "box", "required"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "role": {
+          "enum": ["title", "subtitle", "content", "sidebar", "footer", "pageNumber", "logo", "background", "free"]
+        },
+        "box": {"$ref": "#/$defs/box"},
+        "required": {"type": "boolean"}
+      }
+    },
+    "layout": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "status", "zones", "occurrences", "confidence"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "label": {"type": "string", "minLength": 1},
+        "status": {"$ref": "#/$defs/candidateStatus"},
+        "zones": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/layoutZone"}
+        },
+        "occurrences": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/occurrence"}
+        },
+        "confidence": {"$ref": "#/$defs/confidence"}
+      }
+    },
+    "profileWarning": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "message", "sources"],
+      "properties": {
+        "code": {
+          "enum": ["unsupported_object", "unsupported_effect", "missing_font", "ambiguous_role", "low_confidence", "damaged_object", "other"]
+        },
+        "message": {"type": "string", "minLength": 1},
+        "sources": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/sourceRef"}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-09-29T20:19:27.182157+00:00",
+  "source": "MSP local application storage",
+  "designSystems": [
+    {
+      "id": "562ca1fb-3860-400e-aec0-666c54c8a354",
+      "name": "VK_WorkSpace_Клиентская_конференция_Шаблон_03",
+      "sourceId": "1b8883114486c69dff706e9c4fd9382727c4506c2cfa3ec34f86987f1e852f2f",
+      "slideCount": 29
+    },
+    {
+      "id": "7f88bbe2-84f0-4c73-9c24-3409aca3f5b8",
+      "name": "Шаблон презентации VK Education",
+      "sourceId": "9ef2323ed5f49f464aee5ae7065f1f57bb92c8be3a635be507d59819e285cfe0",
+      "slideCount": 55
+    },
+    {
+      "id": "adfe011d-0742-4910-8069-f2a28153d8c5",
+      "name": "VK Tech шаблон",
+      "sourceId": "cbbe3aa6a21d23cebc4d1383b93dd07a9cea460d683de1903567b616c839485d",
+      "slideCount": 54
+    },
+    {
+      "id": "fbec9ad4-557d-488a-a47e-06498dd831ff",
+      "name": "Горбунов_Коллаж",
+      "sourceId": "ec775ab41c6b971c7eb1b42e7ebabff6b46b99b4733bbce2d8aa2c3c6e4d6f94",
+      "slideCount": 24
+    }
+  ],
+  "projects": [
+    {
+      "id": "025d6430-6764-4367-b764-4d6d1d4782cb",
+      "name": "СЛАЙД 11",
+      "uploadId": "adfe011d-0742-4910-8069-f2a28153d8c5"
+    },
+    {
+      "id": "02d04df5-f64c-4788-9580-08e5e3377db4",
+      "name": "СЛАЙД 1",
+      "uploadId": "562ca1fb-3860-400e-aec0-666c54c8a354"
+    },
+    {
+      "id": "9b5a393d-aca4-407d-8585-f50d6cf81016",
+      "name": "Слайд 1",
+      "uploadId": "7f88bbe2-84f0-4c73-9c24-3409aca3f5b8"
+    },
+    {
+      "id": "bbdcd9a8-96ae-4e09-8297-d7e495aeb47e",
+      "name": "СЛАЙД 1",
+      "uploadId": "fbec9ad4-557d-488a-a47e-06498dd831ff"
+    }
+  ],
+  "msp2Projects": [],
+  "objectCount": 9426,
+  "uncompressedObjectBytes": 1267970330,
+  "excluded": [
+    "credentials",
+    "archived projects",
+    "deleted presentation backups",
+    "worker leases and queues",
+    "unrelated imports",
+    "logs",
+    "experimental project data"
+  ],
+  "restoresTo": "user-app/.wrangler/state"
+}
